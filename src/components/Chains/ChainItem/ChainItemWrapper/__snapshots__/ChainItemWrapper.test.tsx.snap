@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chain Item Wrapper match snapshot 1`] = `
+"<ChainItemWrapper status={5} color=\\"deepPurple\\">
+  <div className=\\"habit-chain-wrapper incomplete-today\\" style={{...}}>
+    <div className=\\"custom-background\\" style={{...}} />
+    <span className=\\"triangleLeft\\" />
+    <span className=\\"triangleRight\\" />
+  </div>
+</ChainItemWrapper>"
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chain Item Score matches snapshot 1`] = `
+"<ChainItemStar color=\\"green\\" value={6}>
+  <MaterialDesignIcon name=\\"star\\" style={{...}}>
+    <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
+  </MaterialDesignIcon>
+</ChainItemStar>"
+`;

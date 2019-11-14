@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow, render } from "enzyme";
+import {shallow, render, mount} from "enzyme";
 import MaterialDesignIcon, { MaterialDesignIconProps } from "./MaterialIcon";
 
 describe('Material Icon Component', () => {
@@ -10,7 +10,7 @@ describe('Material Icon Component', () => {
   };
 
   it('match snapshot', () => {
-    const component = shallow(<MaterialDesignIcon {...props} />);
+    const component = mount(<MaterialDesignIcon {...props} />);
     expect(component.debug()).toMatchSnapshot();
   });
 

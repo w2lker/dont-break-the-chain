@@ -31,7 +31,7 @@ describe('Chain Header Component', () => {
   };
 
   it('match snapshot', () => {
-      const component = shallow(<ChainHeader {...propsSample} />);
+      const component = mount(<ChainHeader {...propsSample} />);
       expect(component.debug()).toMatchSnapshot();
   });
 

@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 1`] = `
+"<ChainItem status={0} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status={0} color=\\"green\\">
+    <div className=\\"habit-chain-wrapper incomplete\\" style={{...}}>
+      <ChainItemScore status={0} color=\\"green\\" value={6}>
+        <span className=\\"score-wrapper hidden bright\\" style={{...}}>
+          +6
+        </span>
+      </ChainItemScore>
+      <ChainItemStar value={6} color=\\"green\\">
+        <MaterialDesignIcon name=\\"star\\" style={{...}}>
+          <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
+        </MaterialDesignIcon>
+      </ChainItemStar>
+      <ChainItemIncomplete status={0} color=\\"green\\" onAdd={[Function: onAdd]} />
+    </div>
+  </ChainItemWrapper>
+</ChainItem>"
+`;
+
+exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 2`] = `
+"<ChainItem status={1} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status={1} color=\\"green\\">
+    <div className=\\"habit-chain-wrapper complete\\" style={{...}}>
+      <ChainItemScore status={1} color=\\"green\\" value={6}>
+        <span className=\\"score-wrapper bright\\" style={{...}}>
+          +6
+        </span>
+      </ChainItemScore>
+      <ChainItemStar value={6} color=\\"green\\">
+        <MaterialDesignIcon name=\\"star\\" style={{...}}>
+          <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
+        </MaterialDesignIcon>
+      </ChainItemStar>
+      <ChainItemIncomplete status={1} color=\\"green\\" onAdd={[Function: onAdd]} />
+    </div>
+  </ChainItemWrapper>
+</ChainItem>"
+`;
+
+exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 3`] = `
+"<ChainItem status={2} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status={2} color=\\"green\\">
+    <div className=\\"habit-chain-wrapper paused\\" style={{...}}>
+      <ChainItemScore status={2} color=\\"green\\" value={6}>
+        <span className=\\"score-wrapper bright\\" style={{...}}>
+          +6
+        </span>
+      </ChainItemScore>
+      <ChainItemStar value={6} color=\\"green\\">
+        <MaterialDesignIcon name=\\"star\\" style={{...}}>
+          <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
+        </MaterialDesignIcon>
+      </ChainItemStar>
+      <ChainItemIncomplete status={2} color=\\"green\\" onAdd={[Function: onAdd]} />
+    </div>
+  </ChainItemWrapper>
+</ChainItem>"
+`;
+
+exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 4`] = `
+"<ChainItem status={3} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status={3} color=\\"green\\">
+    <div className=\\"habit-chain-wrapper start\\" style={{...}}>
+      <ChainItemScore status={3} color=\\"green\\" value={6}>
+        <span className=\\"score-wrapper bright\\" style={{...}}>
+          +6
+        </span>
+      </ChainItemScore>
+      <ChainItemStar value={6} color=\\"green\\">
+        <MaterialDesignIcon name=\\"star\\" style={{...}}>
+          <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
+        </MaterialDesignIcon>
+      </ChainItemStar>
+      <ChainItemIncomplete status={3} color=\\"green\\" onAdd={[Function: onAdd]} />
+    </div>
+  </ChainItemWrapper>
+</ChainItem>"
+`;
+
+exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 5`] = `
+"<ChainItem status={4} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status={4} color=\\"green\\">
+    <div className=\\"habit-chain-wrapper end\\" style={{...}}>
+      <ChainItemScore status={4} color=\\"green\\" value={6}>
+        <span className=\\"score-wrapper bright\\" style={{...}}>
+          +6
+        </span>
+      </ChainItemScore>
+      <ChainItemStar value={6} color=\\"green\\">
+        <MaterialDesignIcon name=\\"star\\" style={{...}}>
+          <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
+        </MaterialDesignIcon>
+      </ChainItemStar>
+      <ChainItemIncomplete status={4} color=\\"green\\" onAdd={[Function: onAdd]} />
+    </div>
+  </ChainItemWrapper>
+</ChainItem>"
+`;
+
+exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 6`] = `
+"<ChainItem status={5} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status={5} color=\\"green\\">
+    <div className=\\"habit-chain-wrapper incomplete-today\\" style={{...}}>
+      <div className=\\"custom-background\\" style={{...}} />
+      <span className=\\"triangleLeft\\" />
+      <span className=\\"triangleRight\\" />
+      <ChainItemScore status={5} color=\\"green\\" value={6}>
+        <span className=\\"score-wrapper hidden bright\\" style={{...}}>
+          +6
+        </span>
+      </ChainItemScore>
+      <ChainItemStar value={6} color=\\"green\\">
+        <MaterialDesignIcon name=\\"star\\" style={{...}}>
+          <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
+        </MaterialDesignIcon>
+      </ChainItemStar>
+      <ChainItemIncomplete status={5} color=\\"green\\" onAdd={[Function: onAdd]}>
+        <WithStyles(ForwardRef(IconButton)) onClick={[Function: onAdd]}>
+          <ForwardRef(IconButton) classes={{...}} onClick={[Function: onAdd]}>
+            <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onAdd]}>
+              <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onAdd]}>
+                <button className=\\"MuiButtonBase-root MuiIconButton-root\\" onBlur={[Function]} onClick={[Function: onAdd]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} type=\\"button\\" disabled={false}>
+                  <span className=\\"MuiIconButton-label\\">
+                    <MaterialDesignIcon name=\\"plus-circle\\" style={{...}}>
+                      <span className=\\"material-icon mdi mdi-plus-circle\\" style={{...}} />
+                    </MaterialDesignIcon>
+                  </span>
+                  <NoSsr>
+                    <WithStyles(undefined) center={true}>
+                      <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                        <span className=\\"MuiTouchRipple-root\\">
+                          <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                        </span>
+                      </ForwardRef(TouchRipple)>
+                    </WithStyles(undefined)>
+                  </NoSsr>
+                </button>
+              </ForwardRef(ButtonBase)>
+            </WithStyles(ForwardRef(ButtonBase))>
+          </ForwardRef(IconButton)>
+        </WithStyles(ForwardRef(IconButton))>
+      </ChainItemIncomplete>
+    </div>
+  </ChainItemWrapper>
+</ChainItem>"
+`;

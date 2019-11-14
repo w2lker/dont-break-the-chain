@@ -1,15 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chain Header Component match snapshot 1`] = `
-"<div className=\\"habit-header-wrapper\\">
-  <MaterialDesignIcon name=\\"sample\\" style={{...}} />
-  <div className=\\"description\\">
-    <h5 className=\\"name\\">
-      Sample name
-    </h5>
-    <span className=\\"stats\\">
-      1/15
-    </span>
+"<ChainHeader id={1} name=\\"Sample name\\" color=\\"cyan\\" icon=\\"sample\\" currentChain={1} longestChain={15} dates={{...}}>
+  <div className=\\"habit-header-wrapper\\">
+    <MaterialDesignIcon name=\\"sample\\" style={{...}}>
+      <span className=\\"material-icon mdi mdi-sample\\" style={{...}} />
+    </MaterialDesignIcon>
+    <div className=\\"description\\">
+      <h5 className=\\"name\\">
+        Sample name
+      </h5>
+      <span className=\\"stats\\">
+        1/15
+      </span>
+    </div>
   </div>
-</div>"
+</ChainHeader>"
 `;
