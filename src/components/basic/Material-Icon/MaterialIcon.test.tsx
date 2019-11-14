@@ -10,8 +10,8 @@ describe('Material Icon Component', () => {
   };
 
   it('match snapshot', () => {
-    const component = render(<MaterialDesignIcon {...props} />);
-    expect(component).toMatchSnapshot();
+    const component = shallow(<MaterialDesignIcon {...props} />);
+    expect(component.debug()).toMatchSnapshot();
   });
 
   it('renders with icon name', () => {
