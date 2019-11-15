@@ -2,17 +2,19 @@ import {List} from 'immutable';
 import {colorsKeys} from "../contants/colors";
 
 export const habitStatus = {
-  incomplete: 0,
-  complete: 1,
-  paused: 2,
-  start: 3,
-  end: 4,
-  incompleteToday: 5
+  incomplete: 'habitStatus/incomplete',
+  complete: 'habitStatus/completed',
+  paused: 'habitStatus/paused',
+  start: 'habitStatus/started',
+  end: 'habitStatus/ended',
+  incompleteToday: 'habitStatus/incompleteToday',
 };
+
+export type habitStatusesType =  'habitStatus/incomplete' | 'habitStatus/completed' | 'habitStatus/paused' | 'habitStatus/started' | 'habitStatus/ended' | 'habitStatus/incompleteToday';
 
 export interface IHabitDate {
   date?: any;
-  status?: string;
+  status?: habitStatusesType | string;
   score?: number;
 }
 

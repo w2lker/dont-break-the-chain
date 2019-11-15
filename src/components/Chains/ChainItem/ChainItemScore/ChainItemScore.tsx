@@ -3,11 +3,11 @@ import classNames from 'classnames';
 
 
 import {colors, colorsKeys} from "../../../../contants/colors";
-import {habitStatus} from "../../../../models/habit";
+import {habitStatus, habitStatusesType} from "../../../../models/habit";
 
 
 export interface IChainItemScoreProps {
-  status: number;
+  status: habitStatusesType;
   color: colorsKeys;
   value: number;
 }

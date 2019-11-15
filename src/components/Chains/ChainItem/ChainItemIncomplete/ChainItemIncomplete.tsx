@@ -4,11 +4,11 @@ import MaterialDesignIcon from "../../../basic/Material-Icon";
 import IconButton from "@material-ui/core/IconButton";
 
 import {colors, colorsKeys} from "../../../../contants/colors";
-import {habitStatus} from "../../../../models/habit";
+import {habitStatus, habitStatusesType} from "../../../../models/habit";
 
 
 export interface IChainItemIncompleteProps {
-  status: number;
+  status: habitStatusesType;
   color: colorsKeys;
   onAdd: () => void;
 }

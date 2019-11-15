@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chain Item Score matches snapshot 1`] = `
-"<ChainItemScore status={1} color=\\"green\\" value={3}>
+"<ChainItemScore status=\\"habitStatus/completed\\" color=\\"green\\" value={3}>
   <span className=\\"score-wrapper\\" style={{...}}>
     +3
   </span>

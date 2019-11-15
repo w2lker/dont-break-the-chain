@@ -2,10 +2,10 @@ import React from "react";
 import classNames from 'classnames';
 
 import {colors, colorsKeys} from "../../../../contants/colors";
-import {habitStatus} from "../../../../models/habit";
+import {habitStatus, habitStatusesType} from "../../../../models/habit";
 
 export interface IChainItemWrapper {
-  status: number,
+  status: habitStatusesType,
   color: colorsKeys,
 }
 
@@ -47,10 +47,6 @@ const ChainItemWrapper: React.FC<IChainItemWrapper> = (props) => {
       {props.children}
     </div>
   )
-};
-
-ChainItemWrapper.defaultProps = {
-  status: habitStatus.incomplete,
 };
 
 export default ChainItemWrapper;

@@ -7,9 +7,10 @@ import ChainItemStar from "./ChainItemStar";
 import ChainItemIncomplete from "./ChainItemIncomplete";
 
 import {colorsKeys} from "../../../contants/colors";
+import {habitStatusesType} from "../../../models/habit";
 
 export interface IChainItemProps {
-  status: number,
+  status: habitStatusesType,
   color: colorsKeys,
   value: number,
   onAdd: () => any

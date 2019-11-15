@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 1`] = `
-"<ChainItem status={0} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
-  <ChainItemWrapper status={0} color=\\"green\\">
+"<ChainItem status=\\"habitStatus/incomplete\\" color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status=\\"habitStatus/incomplete\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper incomplete\\" style={{...}}>
-      <ChainItemScore status={0} color=\\"green\\" value={6}>
+      <ChainItemScore status=\\"habitStatus/incomplete\\" color=\\"green\\" value={6}>
         <span className=\\"score-wrapper hidden bright\\" style={{...}}>
           +6
         </span>
@@ -14,17 +14,17 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
         </MaterialDesignIcon>
       </ChainItemStar>
-      <ChainItemIncomplete status={0} color=\\"green\\" onAdd={[Function: onAdd]} />
+      <ChainItemIncomplete status=\\"habitStatus/incomplete\\" color=\\"green\\" onAdd={[Function: onAdd]} />
     </div>
   </ChainItemWrapper>
 </ChainItem>"
 `;
 
 exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 2`] = `
-"<ChainItem status={1} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
-  <ChainItemWrapper status={1} color=\\"green\\">
+"<ChainItem status=\\"habitStatus/completed\\" color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status=\\"habitStatus/completed\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper complete\\" style={{...}}>
-      <ChainItemScore status={1} color=\\"green\\" value={6}>
+      <ChainItemScore status=\\"habitStatus/completed\\" color=\\"green\\" value={6}>
         <span className=\\"score-wrapper bright\\" style={{...}}>
           +6
         </span>
@@ -34,17 +34,17 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
         </MaterialDesignIcon>
       </ChainItemStar>
-      <ChainItemIncomplete status={1} color=\\"green\\" onAdd={[Function: onAdd]} />
+      <ChainItemIncomplete status=\\"habitStatus/completed\\" color=\\"green\\" onAdd={[Function: onAdd]} />
     </div>
   </ChainItemWrapper>
 </ChainItem>"
 `;
 
 exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 3`] = `
-"<ChainItem status={2} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
-  <ChainItemWrapper status={2} color=\\"green\\">
+"<ChainItem status=\\"habitStatus/paused\\" color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status=\\"habitStatus/paused\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper paused\\" style={{...}}>
-      <ChainItemScore status={2} color=\\"green\\" value={6}>
+      <ChainItemScore status=\\"habitStatus/paused\\" color=\\"green\\" value={6}>
         <span className=\\"score-wrapper bright\\" style={{...}}>
           +6
         </span>
@@ -54,17 +54,17 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
         </MaterialDesignIcon>
       </ChainItemStar>
-      <ChainItemIncomplete status={2} color=\\"green\\" onAdd={[Function: onAdd]} />
+      <ChainItemIncomplete status=\\"habitStatus/paused\\" color=\\"green\\" onAdd={[Function: onAdd]} />
     </div>
   </ChainItemWrapper>
 </ChainItem>"
 `;
 
 exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 4`] = `
-"<ChainItem status={3} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
-  <ChainItemWrapper status={3} color=\\"green\\">
+"<ChainItem status=\\"habitStatus/started\\" color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status=\\"habitStatus/started\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper start\\" style={{...}}>
-      <ChainItemScore status={3} color=\\"green\\" value={6}>
+      <ChainItemScore status=\\"habitStatus/started\\" color=\\"green\\" value={6}>
         <span className=\\"score-wrapper bright\\" style={{...}}>
           +6
         </span>
@@ -74,17 +74,17 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
         </MaterialDesignIcon>
       </ChainItemStar>
-      <ChainItemIncomplete status={3} color=\\"green\\" onAdd={[Function: onAdd]} />
+      <ChainItemIncomplete status=\\"habitStatus/started\\" color=\\"green\\" onAdd={[Function: onAdd]} />
     </div>
   </ChainItemWrapper>
 </ChainItem>"
 `;
 
 exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 5`] = `
-"<ChainItem status={4} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
-  <ChainItemWrapper status={4} color=\\"green\\">
+"<ChainItem status=\\"habitStatus/ended\\" color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status=\\"habitStatus/ended\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper end\\" style={{...}}>
-      <ChainItemScore status={4} color=\\"green\\" value={6}>
+      <ChainItemScore status=\\"habitStatus/ended\\" color=\\"green\\" value={6}>
         <span className=\\"score-wrapper bright\\" style={{...}}>
           +6
         </span>
@@ -94,20 +94,20 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
         </MaterialDesignIcon>
       </ChainItemStar>
-      <ChainItemIncomplete status={4} color=\\"green\\" onAdd={[Function: onAdd]} />
+      <ChainItemIncomplete status=\\"habitStatus/ended\\" color=\\"green\\" onAdd={[Function: onAdd]} />
     </div>
   </ChainItemWrapper>
 </ChainItem>"
 `;
 
 exports[`Chain Component Chain Component statuses snapshots match snapshot statuses 6`] = `
-"<ChainItem status={5} color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
-  <ChainItemWrapper status={5} color=\\"green\\">
+"<ChainItem status=\\"habitStatus/incompleteToday\\" color=\\"green\\" value={6} onAdd={[Function: onAdd]}>
+  <ChainItemWrapper status=\\"habitStatus/incompleteToday\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper incomplete-today\\" style={{...}}>
       <div className=\\"custom-background\\" style={{...}} />
       <span className=\\"triangleLeft\\" />
       <span className=\\"triangleRight\\" />
-      <ChainItemScore status={5} color=\\"green\\" value={6}>
+      <ChainItemScore status=\\"habitStatus/incompleteToday\\" color=\\"green\\" value={6}>
         <span className=\\"score-wrapper hidden bright\\" style={{...}}>
           +6
         </span>
@@ -117,7 +117,7 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
         </MaterialDesignIcon>
       </ChainItemStar>
-      <ChainItemIncomplete status={5} color=\\"green\\" onAdd={[Function: onAdd]}>
+      <ChainItemIncomplete status=\\"habitStatus/incompleteToday\\" color=\\"green\\" onAdd={[Function: onAdd]}>
         <WithStyles(ForwardRef(IconButton)) onClick={[Function: onAdd]}>
           <ForwardRef(IconButton) classes={{...}} onClick={[Function: onAdd]}>
             <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onAdd]}>

@@ -3,7 +3,7 @@ import { shallow, mount, render } from "enzyme";
 import ChainItemWrapper, {IChainItemWrapper} from "./ChainItemWrapper";
 import {colors} from "../../../../contants/colors";
 import {habitStatus} from "../../../../models/habit";
-import {arrayWithout} from "../../../../utils/tests";
+import {arrayWithout} from "../../../../utils/testUtils";
 
 describe('Chain Item Wrapper', () => {
   const emptyProps: IChainItemWrapper = {

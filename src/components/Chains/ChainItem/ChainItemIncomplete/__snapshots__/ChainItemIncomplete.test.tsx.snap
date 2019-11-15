@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chain Item Incomplete match snapshot 1`] = `
-"<ChainItemIncomplete status={5} color=\\"deepPurple\\" onAdd={[Function: onAdd]}>
+"<ChainItemIncomplete status=\\"habitStatus/incompleteToday\\" color=\\"deepPurple\\" onAdd={[Function: onAdd]}>
   <WithStyles(ForwardRef(IconButton)) onClick={[Function: onAdd]}>
     <ForwardRef(IconButton) classes={{...}} onClick={[Function: onAdd]}>
       <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onAdd]}>
