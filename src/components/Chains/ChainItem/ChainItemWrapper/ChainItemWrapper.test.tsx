@@ -1,16 +1,18 @@
-import React from "react";
-import { shallow, mount, render } from "enzyme";
-import ChainItemWrapper, {IChainItemWrapper} from "./ChainItemWrapper";
-import {colors} from "../../../../contants/colors";
-import {habitStatus} from "../../../../models/habit";
-import {arrayWithout} from "../../../../utils/testUtils";
+import { mount, shallow } from 'enzyme';
+import React from 'react';
+
+import ChainItemWrapper, { IChainItemWrapper } from './ChainItemWrapper';
+
+import { colors } from '../../../../contants/colors';
+import { habitStatus } from '../../../../models/habit';
+import { arrayWithout } from '../../../../utils/testUtils';
 
 describe('Chain Item Wrapper', () => {
   const emptyProps: IChainItemWrapper = {
     // @ts-ignore
     status: null,
     // @ts-ignore
-    color: null
+    color: null,
   };
 
   const wrapperClassNames = ['incomplete', 'complete', 'paused', 'start', 'end', 'incomplete-today'];
@@ -18,8 +20,9 @@ describe('Chain Item Wrapper', () => {
 
   it('match snapshot', () => {
     const snapshotProps: IChainItemWrapper = {
+      // @ts-ignore
       status: habitStatus.incompleteToday,
-      color: "deepPurple",
+      color: 'deepPurple',
     };
     const component = mount(<ChainItemWrapper {...snapshotProps} />);
     expect(component.debug()).toMatchSnapshot();
@@ -31,26 +34,27 @@ describe('Chain Item Wrapper', () => {
     });
     it("doesn't render wrapper classes", () => {
       const habitWrapper = component.find('.habit-chain-wrapper');
-      wrapperClassNames.forEach( className => {
+      wrapperClassNames.forEach(className => {
         expect(habitWrapper.hasClass(className)).toBeFalsy();
       });
     });
     it('skips triangles render', () => {
-      triangleClasses.forEach( className => {
+      triangleClasses.forEach(className => {
         expect(component.find(className).exists()).toBeFalsy();
       });
     });
     it('applies default color value', () => {
-        const defaultStyle = {
-          backgroundColor: colors['blue'][100],
-        };
-        expect(component.find('.habit-chain-wrapper').props().style).toEqual(defaultStyle);
+      const defaultStyle = {
+        backgroundColor: colors.blue[100],
+      };
+      expect(component.find('.habit-chain-wrapper').props().style).toEqual(defaultStyle);
     });
   });
   describe('Renders incomplete today status', () => {
     const newProps: IChainItemWrapper = {
+      // @ts-ignore
       status: habitStatus.incompleteToday,
-      color: "green",
+      color: 'green',
     };
     const component = shallow(<ChainItemWrapper {...newProps} />);
     it('renders wrapper', () => {
@@ -60,33 +64,34 @@ describe('Chain Item Wrapper', () => {
     it("doesn't render wrapper classes", () => {
       const habitWrapper = component.find('.habit-chain-wrapper');
       const incompleteClasses = arrayWithout(wrapperClassNames, 'incomplete-today');
-      incompleteClasses.forEach( className => {
+      incompleteClasses.forEach(className => {
         expect(habitWrapper.hasClass(className)).toBeFalsy();
       });
     });
-    it("executes triangles render", () => {
-      triangleClasses.forEach( className => {
+    it('executes triangles render', () => {
+      triangleClasses.forEach(className => {
         expect(component.find(className).exists()).toBeTruthy();
       });
     });
   });
   it('Renders other statuses', () => {
-      const getProps = (status: number): IChainItemWrapper => ({
-        status,
-        color: 'green'
-      });
+    const getProps = (status: number): IChainItemWrapper => ({
+      // @ts-ignore
+      status,
+      color: 'green',
+    });
 
-      const statuses = ['incomplete', 'complete', 'paused', 'start', 'end'];
-      statuses.forEach( status => {
+    const statuses = ['incomplete', 'complete', 'paused', 'start', 'end'];
+    statuses.forEach(status => {
         // @ts-ignore
-        const component = shallow(<ChainItemWrapper {...getProps(habitStatus[status])} />);
-        const otherClasses = arrayWithout(wrapperClassNames, status);
-        otherClasses.forEach( className => {
-          expect(component.find('.habit-chain-wrapper').hasClass(className)).toBeFalsy();
-        });
-        triangleClasses.forEach( className => {
-          expect(component.find(className).exists()).toBeFalsy();
-        });
+      const component = shallow(<ChainItemWrapper {...getProps(habitStatus[status])} />);
+      const otherClasses = arrayWithout(wrapperClassNames, status);
+      otherClasses.forEach(className => {
+        expect(component.find('.habit-chain-wrapper').hasClass(className)).toBeFalsy();
       });
-    })
+      triangleClasses.forEach(className => {
+        expect(component.find(className).exists()).toBeFalsy();
+      });
+    });
+  });
 });

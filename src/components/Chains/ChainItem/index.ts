@@ -1,2 +1,2 @@
-import ChainItem from "./ChainItem";
+import ChainItem from './ChainItem';
 export default ChainItem;

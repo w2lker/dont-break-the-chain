@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import MaterialDesignIcon from "../../basic/Material-Icon";
+import MaterialDesignIcon from '../../basic/Material-Icon';
 
-import {IHabit} from "../../../models/habit";
-import {colors} from "../../../contants/colors";
+import { colors } from '../../../contants/colors';
+import { IHabit } from '../../../models/habit';
 
 const ChainHeader: React.FC<IHabit> = (props) => {
-  const {currentChain, longestChain} = props;
+  const { currentChain, longestChain } = props;
   // Handling incorrect attributes (empty string etc)
   const icon = props.icon || 'ninja';
   const color = colors[props.color || 'blue'][500];
@@ -35,7 +35,7 @@ const ChainHeader: React.FC<IHabit> = (props) => {
         {renderStats}
       </div>
     </div>
-  )
+  );
 };
 
 export default ChainHeader;

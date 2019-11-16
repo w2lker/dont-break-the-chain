@@ -1,8 +1,9 @@
-import React from "react";
-import { shallow, mount, render } from "enzyme";
-import ChainItemStar, {IChainItemStarProps} from "./ChainItemStar";
-import {habitStatus} from "../../../../models/habit";
-import {colors} from "../../../../contants/colors";
+import { mount, shallow } from 'enzyme';
+import React from 'react';
+
+import ChainItemStar, { IChainItemStarProps } from './ChainItemStar';
+
+import { colors } from '../../../../contants/colors';
 
 describe('Chain Item Score', () => {
   const emptyProps: IChainItemStarProps = {
@@ -13,7 +14,7 @@ describe('Chain Item Score', () => {
   };
 
   const sampleProps: IChainItemStarProps = {
-    color: "green",
+    color: 'green',
     value: 6,
   };
 
@@ -33,21 +34,21 @@ describe('Chain Item Score', () => {
   });
 
   it('renders with default color', () => {
-      const newProps: IChainItemStarProps = {
-        ...sampleProps,
+    const newProps: IChainItemStarProps = {
+      ...sampleProps,
         // @ts-ignore
-        color: null
-      };
-    const sampleStyle = {
-      color: colors['blue'][500],
+      color: null,
     };
-      const component = shallow(<ChainItemStar {...newProps} />);
-      expect(component.find('MaterialDesignIcon').props().style).toEqual(sampleStyle);
+    const sampleStyle = {
+      color: colors.blue[500],
+    };
+    const component = shallow(<ChainItemStar {...newProps} />);
+    expect(component.find('MaterialDesignIcon').props().style).toEqual(sampleStyle);
   });
 
   describe('Sample props rendering', () => {
     const component = shallow(<ChainItemStar {...sampleProps}/>);
-    it("renders icon component ", () => {
+    it('renders icon component ', () => {
       expect(component.find('MaterialDesignIcon').props().name).toBe('star');
     });
     it('assigns correct color', () => {
@@ -55,7 +56,6 @@ describe('Chain Item Score', () => {
         color: colors[sampleProps.color][500],
       };
       expect(component.find('MaterialDesignIcon').props().style).toEqual(sampleStyle);
-    })
+    });
   });
 });
-

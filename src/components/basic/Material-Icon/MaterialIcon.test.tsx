@@ -1,12 +1,13 @@
-import React from "react";
-import {shallow, render, mount} from "enzyme";
-import MaterialDesignIcon, { MaterialDesignIconProps } from "./MaterialIcon";
+import React from 'react';
+
+import { mount, render, shallow } from 'enzyme';
+import MaterialDesignIcon, { IMaterialDesignIconProps } from './MaterialIcon';
 
 describe('Material Icon Component', () => {
-  const props: MaterialDesignIconProps = {
+  const props: IMaterialDesignIconProps = {
     name: 'sample',
     className: '',
-    style: {}
+    style: {},
   };
 
   it('match snapshot', () => {
@@ -22,15 +23,15 @@ describe('Material Icon Component', () => {
   });
 
   it('skips render with empty icon name', () => {
-    const newProps: MaterialDesignIconProps = {
-      name: ''
+    const newProps: IMaterialDesignIconProps = {
+      name: '',
     };
     const component = shallow(<MaterialDesignIcon {...newProps} />);
     expect(component).toEqual({});
   });
 
   it('renders with external class', () => {
-    const newProps: MaterialDesignIconProps = {
+    const newProps: IMaterialDesignIconProps = {
       ...props,
       className: 'sample-class',
     };
@@ -41,14 +42,14 @@ describe('Material Icon Component', () => {
 
   it('renders with external styles', () => {
     const attribute = 'attribute';
-    const newProps: MaterialDesignIconProps = {
+    const newProps: IMaterialDesignIconProps = {
       ...props,
       style: {
-        [attribute]: 'the-test-value'
+        [attribute]: 'the-test-value',
       },
     };
     const component = render(<MaterialDesignIcon {...newProps} />);
     const styles = component.get(0).attribs.style;
-    expect(styles).toBe(`${attribute}:${newProps.style[attribute]}`)
+    expect(styles).toBe(`${attribute}:${newProps.style[attribute]}`);
   });
 });

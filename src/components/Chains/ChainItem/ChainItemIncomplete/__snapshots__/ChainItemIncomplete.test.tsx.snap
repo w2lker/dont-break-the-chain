@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chain Item Incomplete match snapshot 1`] = `
-"<ChainItemIncomplete status=\\"habitStatus/incompleteToday\\" color=\\"deepPurple\\" onAdd={[Function: onAdd]}>
-  <WithStyles(ForwardRef(IconButton)) onClick={[Function: onAdd]}>
-    <ForwardRef(IconButton) classes={{...}} onClick={[Function: onAdd]}>
-      <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onAdd]}>
-        <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onAdd]}>
-          <button className=\\"MuiButtonBase-root MuiIconButton-root\\" onBlur={[Function]} onClick={[Function: onAdd]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} type=\\"button\\" disabled={false}>
+"<ChainItemIncomplete status=\\"habitStatus/incompleteToday\\" color=\\"deepPurple\\" onAdd={[Function: mockConstructor]}>
+  <WithStyles(ForwardRef(IconButton)) onClick={[Function: mockConstructor]}>
+    <ForwardRef(IconButton) classes={{...}} onClick={[Function: mockConstructor]}>
+      <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: mockConstructor]}>
+        <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: mockConstructor]}>
+          <button className=\\"MuiButtonBase-root MuiIconButton-root\\" onBlur={[Function]} onClick={[Function: mockConstructor]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} type=\\"button\\" disabled={false}>
             <span className=\\"MuiIconButton-label\\">
               <MaterialDesignIcon name=\\"plus-circle\\" style={{...}}>
                 <span className=\\"material-icon mdi mdi-plus-circle\\" style={{...}} />

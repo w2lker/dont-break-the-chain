@@ -1,2 +1,2 @@
-import MaterialDesignIcon from "./MaterialIcon";
+import MaterialDesignIcon from './MaterialIcon';
 export default MaterialDesignIcon;

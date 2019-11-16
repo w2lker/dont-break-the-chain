@@ -1,8 +1,10 @@
-import React from "react";
-import { shallow, mount, render} from "enzyme";
-import ChainItemIncomplete, {IChainItemIncompleteProps} from "./ChainItemIncomplete";
-import {habitStatus} from "../../../../models/habit";
-import {colors, colorsKeys} from "../../../../contants/colors";
+import { mount, shallow } from 'enzyme';
+import React from 'react';
+
+import ChainItemIncomplete, { IChainItemIncompleteProps } from './ChainItemIncomplete';
+
+import { colors, colorsKeys } from '../../../../contants/colors';
+import { habitStatus } from '../../../../models/habit';
 
 describe('Chain Item Incomplete', () => {
   const emptyProps: IChainItemIncompleteProps = {
@@ -10,36 +12,37 @@ describe('Chain Item Incomplete', () => {
     status: undefined,
     // @ts-ignore
     color: undefined,
-    onAdd: () => {},
+    onAdd: jest.fn(),
   };
 
   const sampleProps: IChainItemIncompleteProps = {
+    // @ts-ignore
     status: habitStatus.incompleteToday,
-    color: "deepPurple",
-    onAdd: () => {},
+    color: 'deepPurple',
+    onAdd: jest.fn(),
   };
 
   it('match snapshot', () => {
-      const component = mount(<ChainItemIncomplete {...sampleProps} />);
-      expect(component.debug()).toMatchSnapshot();
+    const component = mount(<ChainItemIncomplete {...sampleProps} />);
+    expect(component.debug()).toMatchSnapshot();
   });
 
   it('skips render with empty props passed', () => {
-      const component = shallow(<ChainItemIncomplete {...emptyProps} />);
-      expect(component.isEmptyRender()).toBe(true);
+    const component = shallow(<ChainItemIncomplete {...emptyProps} />);
+    expect(component.isEmptyRender()).toBe(true);
   });
 
   it('skip render with status !== incompleteToday', () => {
-    const otherStatuses = Object.values(habitStatus).filter( item => item !== habitStatus.incompleteToday );
-    otherStatuses.forEach( (status) => {
+    const otherStatuses = Object.values(habitStatus).filter(item => item !== habitStatus.incompleteToday);
+    otherStatuses.forEach((status) => {
       const newProps: IChainItemIncompleteProps = {
         ...sampleProps,
         // @ts-ignore
-        status: status,
+        status,
       };
       const component = shallow(<ChainItemIncomplete {...newProps} />);
       expect(component.isEmptyRender()).toBe(true);
-    })
+    });
   });
 
   describe('testing color assignment', () => {
@@ -47,7 +50,7 @@ describe('Chain Item Incomplete', () => {
       const newProps: IChainItemIncompleteProps = {
         ...sampleProps,
         // @ts-ignore
-        color: color,
+        color,
       };
 
       const sampleStyle = {
@@ -64,7 +67,7 @@ describe('Chain Item Incomplete', () => {
       const colorKeys = Object.keys(colors);
       // @ts-ignore
       colorKeys.forEach(testColorAssignment);
-    })
+    });
   });
 
   it('fires click callback', () => {
@@ -76,5 +79,5 @@ describe('Chain Item Incomplete', () => {
     const component = shallow(<ChainItemIncomplete {...newProps} />);
     component.simulate('click');
     expect(mockAddClick.mock.calls.length).toEqual(1);
-  })
+  });
 });

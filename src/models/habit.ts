@@ -1,5 +1,5 @@
-import {List} from 'immutable';
-import {colorsKeys} from "../contants/colors";
+import { List } from 'immutable';
+import { colorsKeys } from '../contants/colors';
 
 export const habitStatus = {
   incomplete: 'habitStatus/incomplete',

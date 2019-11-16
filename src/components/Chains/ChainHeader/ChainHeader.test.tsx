@@ -1,12 +1,11 @@
-import React from "react";
-import {List} from "immutable";
-import { shallow, mount, render } from "enzyme";
+import { mount, render, shallow } from 'enzyme';
+import { List } from 'immutable';
+import React from 'react';
 
-import ChainHeader from "./ChainHeader";
+import ChainHeader from './ChainHeader';
 
-import {IHabit} from "../../../models/habit";
-import {colors} from "../../../contants/colors";
-
+import { colors } from '../../../contants/colors';
+import { IHabit } from '../../../models/habit';
 
 describe('Chain Header Component', () => {
   const propsEmpty: IHabit = {
@@ -17,7 +16,7 @@ describe('Chain Header Component', () => {
     icon: '',
     currentChain: undefined,
     longestChain: undefined,
-    dates: List()
+    dates: List(),
   };
 
   const propsSample: IHabit = {
@@ -31,8 +30,8 @@ describe('Chain Header Component', () => {
   };
 
   it('match snapshot', () => {
-      const component = mount(<ChainHeader {...propsSample} />);
-      expect(component.debug()).toMatchSnapshot();
+    const component = mount(<ChainHeader {...propsSample} />);
+    expect(component.debug()).toMatchSnapshot();
   });
 
   describe('testing default props', () => {
@@ -44,7 +43,7 @@ describe('Chain Header Component', () => {
 
     it('renders default icon props', () => {
       const defaultStyle = {
-        color: colors['blue'][500],
+        color: colors.blue[500],
       };
       const defaultName = 'ninja';
       const iconComponent = component.find('MaterialDesignIcon');
@@ -54,8 +53,8 @@ describe('Chain Header Component', () => {
     });
 
     it('renders without stats', () => {
-        expect(component.find('.stats')).toEqual({});
-    })
+      expect(component.find('.stats')).toEqual({});
+    });
   });
 
   describe('testing custom props', () => {
@@ -80,7 +79,7 @@ describe('Chain Header Component', () => {
     it('renders custom stats', () => {
       const sampleStats = `${propsSample.currentChain}/${propsSample.longestChain}`;
       expect(component.find('.stats').text()).toEqual(sampleStats);
-    })
-  })
+    });
+  });
 
 });

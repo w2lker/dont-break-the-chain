@@ -1,9 +1,9 @@
-export function arrayWithout(array:any[], item: any) {
-  if (!Array.isArray(array) ) {
-    return null;
+export function arrayWithout(array: any[], item: any): any[] {
+  if (!Array.isArray(array)) {
+    return [];
   }
   const index = array.indexOf(item);
-  if ( index === -1 ) {
+  if (index === -1) {
     return array;
   }
   const newArray = [...array];

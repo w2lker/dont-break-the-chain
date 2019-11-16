@@ -1,2 +1,2 @@
-import ChainItemWrapper from "./ChainItemWrapper";
+import ChainItemWrapper from './ChainItemWrapper';
 export default ChainItemWrapper;

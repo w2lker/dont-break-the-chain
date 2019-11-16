@@ -1,15 +1,18 @@
-import React from "react";
-import { shallow, mount, render } from "enzyme";
-import ChainItem, {IChainItemProps} from "./ChainItem";
-import {habitStatus} from "../../../models/habit";
+import { mount, render, shallow } from 'enzyme';
+import React from 'react';
+
+import ChainItem, { IChainItemProps } from './ChainItem';
+
+import { habitStatus } from '../../../models/habit';
 
 describe('Chain Component', () => {
   describe('Chain Component statuses snapshots', () => {
     const sampleProps: IChainItemProps = {
+      // @ts-ignore
       status: 0,
-      color: "green",
+      color: 'green',
       value: 6,
-      onAdd: () => {}
+      onAdd: jest.fn(),
     };
 
     it('match snapshot statuses', () => {
@@ -18,8 +21,9 @@ describe('Chain Component', () => {
         const props = {
           ...sampleProps,
           // @ts-ignore
-          status: status
+          status,
         };
+        // @ts-ignore
         const component = mount(<ChainItem {...props} />);
         expect(component.debug()).toMatchSnapshot();
       });
@@ -40,17 +44,18 @@ describe('Chain Component', () => {
     }
 
     it('renders incomplete habit correctly', () => {
-        const incompleteProps: IChainItemProps = {
-          ...sampleProps,
-          status: habitStatus.incomplete,
-          value: 0,
-        };
-        const component = mount(<ChainItem {...incompleteProps}/>);
-        expect(component.find('.habit-chain-wrapper').hasClass('incomplete')).toBeTruthy();
-        expect(component.find('.triangleLeft').exists()).toBeFalsy();
-        expect(component.find('.score-wrapper').hasClass('hidden')).toBeTruthy();
-        expect(component.find('.mdi-star').exists()).toBeFalsy();
-        expect(component.find('.mdi-plus-circle').exists()).toBeFalsy();
+      const incompleteProps: IChainItemProps = {
+        ...sampleProps,
+          // @ts-ignore
+        status: habitStatus.incomplete,
+        value: 0,
+      };
+      const component = mount(<ChainItem {...incompleteProps}/>);
+      expect(component.find('.habit-chain-wrapper').hasClass('incomplete')).toBeTruthy();
+      expect(component.find('.triangleLeft').exists()).toBeFalsy();
+      expect(component.find('.score-wrapper').hasClass('hidden')).toBeTruthy();
+      expect(component.find('.mdi-star').exists()).toBeFalsy();
+      expect(component.find('.mdi-plus-circle').exists()).toBeFalsy();
     });
     it('renders complete habit correctly', () => testSingleStatus('complete'));
     it('renders paused habit correctly', () => testSingleStatus('paused'));
@@ -59,6 +64,7 @@ describe('Chain Component', () => {
     it('renders incomplete today habit correctly', () => {
       const props: IChainItemProps = {
         ...sampleProps,
+        // @ts-ignore
         status: habitStatus.incompleteToday,
         value: 0,
       };
@@ -68,6 +74,6 @@ describe('Chain Component', () => {
       expect(component.find('.score-wrapper').hasClass('hidden')).toBeTruthy();
       expect(component.find('.mdi-star').exists()).toBeFalsy();
       expect(component.find('.mdi-plus-circle').exists()).toBeTruthy();
-    })
+    });
   });
 });

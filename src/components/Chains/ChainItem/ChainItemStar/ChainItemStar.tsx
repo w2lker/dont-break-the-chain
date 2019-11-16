@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import MaterialDesignIcon from "../../../basic/Material-Icon";
+import MaterialDesignIcon from '../../../basic/Material-Icon';
 
-import {colors, colorsKeys} from "../../../../contants/colors";
-
+import { colors, colorsKeys } from '../../../../contants/colors';
 
 export interface IChainItemStarProps {
   value: number;
@@ -11,7 +10,7 @@ export interface IChainItemStarProps {
 }
 
 const ChainItemStar: React.FC<IChainItemStarProps> = (props) => {
-  const {value} = props;
+  const { value } = props;
   if (!value || value < 4) {
     return null;
   }

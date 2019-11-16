@@ -1,2 +1,2 @@
-import ChainItemScore from "./ChainItemScore";
+import ChainItemScore from './ChainItemScore';
 export default ChainItemScore;
