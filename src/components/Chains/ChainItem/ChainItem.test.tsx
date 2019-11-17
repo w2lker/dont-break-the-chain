@@ -31,16 +31,32 @@ describe('Chain Component', () => {
     // @ts-ignore
     const getClasses = (instance, componentName) => instance.find(componentName).props().classes;
 
+    const mapOtherStatusesToClasses = {
+      incomplete: 'incomplete',
+      complete: 'wrapperComplete',
+      paused: 'paused',
+      start: 'wrapperStart',
+      end: 'wrapperEnd',
+    };
+    const getStatusClassname = (status: string, classes) => {
+      // @ts-ignore
+      const mappedStatus = mapOtherStatusesToClasses[status];
+      // @ts-ignore
+      const statusToClass = classes[mappedStatus];
+      return statusToClass || status;
+    };
+
     function testSingleStatus(status: string) {
       const props: IChainItemProps = {
         ...sampleProps,
         // @ts-ignore
         status: habitStatus[status],
       };
+
       const component = mount(<ChainItem {...props}/>);
-      const a = 3;
-      expect(component.find('.habit-chain-wrapper').hasClass(status)).toBeTruthy();
-      expect(component.find('.triangleLeft').exists()).toBeFalsy();
+      const wrapperItemClasses = getClasses(component, 'ChainItemWrapper');
+      expect(component.find(`.${wrapperItemClasses.wrapper}`).hasClass(getStatusClassname(status, wrapperItemClasses))).toBeTruthy();
+      expect(component.find(`.${wrapperItemClasses.triangleLeft}`).exists()).toBeFalsy();
       const scoreItemClasses = getClasses(component, 'ChainItemScore');
       expect(component.find(`.${scoreItemClasses.root}`).hasClass('hidden')).toBeFalsy();
       expect(component.find('.mdi-star').exists()).toBeTruthy();
@@ -55,8 +71,9 @@ describe('Chain Component', () => {
         value: 0,
       };
       const component = mount(<ChainItem {...incompleteProps}/>);
-      expect(component.find('.habit-chain-wrapper').hasClass('incomplete')).toBeTruthy();
-      expect(component.find('.triangleLeft').exists()).toBeFalsy();
+      const wrapperItemClasses = getClasses(component, 'ChainItemWrapper');
+      expect(component.find(`.${wrapperItemClasses.wrapper}`).hasClass('incomplete')).toBeTruthy();
+      expect(component.find(`.${wrapperItemClasses.triangleLeft}`).exists()).toBeFalsy();
       const scoreItemClasses = getClasses(component, 'ChainItemScore');
       expect(component.find(`.${scoreItemClasses.root}`).hasClass('hidden')).toBeTruthy();
       expect(component.find('.mdi-star').exists()).toBeFalsy();
@@ -74,8 +91,9 @@ describe('Chain Component', () => {
         value: 0,
       };
       const component = mount(<ChainItem {...props}/>);
-      expect(component.find('.habit-chain-wrapper').hasClass('incomplete-today')).toBeTruthy();
-      expect(component.find('.triangleLeft').exists()).toBeTruthy();
+      const wrapperItemClasses = getClasses(component, 'ChainItemWrapper');
+      expect(component.find(`.${wrapperItemClasses.wrapper}`).hasClass(wrapperItemClasses.wrapperIncompleteToday)).toBeTruthy();
+      expect(component.find(`.${wrapperItemClasses.triangleLeft}`).exists()).toBeTruthy();
       const scoreItemClasses = getClasses(component, 'ChainItemScore');
       expect(component.find(`.${scoreItemClasses.root}`).hasClass('hidden')).toBeTruthy();
       expect(component.find('.mdi-star').exists()).toBeFalsy();
