@@ -2,12 +2,19 @@ import { mount, shallow } from 'enzyme';
 import React from 'react';
 
 import ChainItemScore, { IChainItemScoreProps } from './ChainItemScore';
+import ChainItemScoreDecorated from './ChainItemScore.decorators';
+import chainItemScoreStyles from './ChainItemScore.styles';
 
 import { colors } from '../../../../contants/colors';
 import { habitStatus } from '../../../../models/habit';
 
+const classes = {
+  root: 'chain-item-score-root',
+};
+
 describe('Chain Item Score', () => {
   const emptyProps: IChainItemScoreProps = {
+    classes,
       // @ts-ignore
     status: null,
       // @ts-ignore
@@ -17,6 +24,7 @@ describe('Chain Item Score', () => {
   };
 
   const sampleProps: IChainItemScoreProps = {
+    classes,
       // @ts-ignore
     status: habitStatus.complete,
     // @ts-ignore
@@ -32,7 +40,7 @@ describe('Chain Item Score', () => {
   describe('Empty props rendering', () => {
     const component = shallow(<ChainItemScore {...emptyProps} />);
     it('assigns hidden classname', () => {
-      expect(component.find('span').hasClass('score-wrapper')).toBe(true);
+      expect(component.find('span').hasClass(classes.root)).toBe(true);
       expect(component.find('span').hasClass('hidden')).toBe(true);
       expect(component.find('span').hasClass('bright')).toBe(false);
     });
@@ -41,29 +49,29 @@ describe('Chain Item Score', () => {
       const emptyStateStyles = {
         color: colors.blue[400],
       };
-      const spanStyles = component.find('.score-wrapper').props().style;
+      const spanStyles = component.find(`.${classes.root}`).props().style;
       expect(spanStyles).toEqual(emptyStateStyles);
     });
 
     it('hides score value output', () => {
-      expect(component.find('.score-wrapper').text()).toBe('');
+      expect(component.find(`.${classes.root}`).text()).toBe('');
     });
   });
 
   describe('Sample props rendering', () => {
     const component = shallow(<ChainItemScore {...sampleProps}/>);
     it("doesn't assign hidden class", () => {
-      expect(component.find('span').hasClass('score-wrapper')).toBe(true);
+      expect(component.find('span').hasClass(classes.root)).toBe(true);
       expect(component.find('span').hasClass('hidden')).toBe(false);
     });
     it('outputs score value', () => {
-      expect(component.find('.score-wrapper').text()).toBe(`+${sampleProps.value}`);
+      expect(component.find(`.${classes.root}`).text()).toBe(`+${sampleProps.value}`);
     });
     it('assigns correct color', () => {
       const sampleStyle = {
         color: colors[sampleProps.color][400],
       };
-      expect(component.find('.score-wrapper').props().style).toEqual(sampleStyle);
+      expect(component.find(`.${classes.root}`).props().style).toEqual(sampleStyle);
     });
   });
 
@@ -74,7 +82,7 @@ describe('Chain Item Score', () => {
     };
     const component = shallow(<ChainItemScore {...newProps}/>);
     it('assigns accent class', () => {
-      expect(component.find('span').hasClass('score-wrapper')).toBe(true);
+      expect(component.find('span').hasClass(classes.root)).toBe(true);
       expect(component.find('span').hasClass('hidden')).toBe(false);
       expect(component.find('span').hasClass('bright')).toBe(true);
     });
@@ -83,7 +91,31 @@ describe('Chain Item Score', () => {
       const sampleStyle = {
         color: colors[sampleProps.color][500],
       };
-      expect(component.find('.score-wrapper').props().style).toEqual(sampleStyle);
+      expect(component.find(`.${classes.root}`).props().style).toEqual(sampleStyle);
     });
+  });
+});
+
+describe('Chain Item Score Styles', () => {
+  it('should contain principle fields', () => {
+    expect(chainItemScoreStyles).toBeDefined();
+    expect(chainItemScoreStyles.root).toBeDefined();
+  });
+});
+
+describe('Chain Item Score Decorated', () => {
+  const props: IChainItemScoreProps = {
+    // @ts-ignore
+    status: habitStatus.complete,
+    // @ts-ignore
+    color: 'green',
+    value: 3,
+  };
+  it('provides styled classes from decorators', () => {
+    const component = mount(<ChainItemScoreDecorated {...props} />);
+    // @ts-ignore
+    const assignedClasses = component.find('ChainItemScore').props().classes;
+    expect(assignedClasses).toBeDefined();
+    expect(assignedClasses.root).toBeDefined();
   });
 });

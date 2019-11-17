@@ -4,11 +4,13 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
 "<ChainItem status=\\"habitStatus/incomplete\\" color=\\"green\\" value={6} onAdd={[Function: mockConstructor]}>
   <ChainItemWrapper status=\\"habitStatus/incomplete\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper incomplete\\" style={{...}}>
-      <ChainItemScore status=\\"habitStatus/incomplete\\" color=\\"green\\" value={6}>
-        <span className=\\"score-wrapper hidden bright\\" style={{...}}>
-          +6
-        </span>
-      </ChainItemScore>
+      <WithStyles(ChainItemScore) status=\\"habitStatus/incomplete\\" color=\\"green\\" value={6}>
+        <ChainItemScore classes={{...}} status=\\"habitStatus/incomplete\\" color=\\"green\\" value={6}>
+          <span className=\\"ChainItemScore-root-1 hidden bright\\" style={{...}}>
+            +6
+          </span>
+        </ChainItemScore>
+      </WithStyles(ChainItemScore)>
       <ChainItemStar value={6} color=\\"green\\">
         <MaterialDesignIcon name=\\"star\\" style={{...}}>
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
@@ -24,11 +26,13 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
 "<ChainItem status=\\"habitStatus/completed\\" color=\\"green\\" value={6} onAdd={[Function: mockConstructor]}>
   <ChainItemWrapper status=\\"habitStatus/completed\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper complete\\" style={{...}}>
-      <ChainItemScore status=\\"habitStatus/completed\\" color=\\"green\\" value={6}>
-        <span className=\\"score-wrapper bright\\" style={{...}}>
-          +6
-        </span>
-      </ChainItemScore>
+      <WithStyles(ChainItemScore) status=\\"habitStatus/completed\\" color=\\"green\\" value={6}>
+        <ChainItemScore classes={{...}} status=\\"habitStatus/completed\\" color=\\"green\\" value={6}>
+          <span className=\\"ChainItemScore-root-1 bright\\" style={{...}}>
+            +6
+          </span>
+        </ChainItemScore>
+      </WithStyles(ChainItemScore)>
       <ChainItemStar value={6} color=\\"green\\">
         <MaterialDesignIcon name=\\"star\\" style={{...}}>
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
@@ -44,11 +48,13 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
 "<ChainItem status=\\"habitStatus/paused\\" color=\\"green\\" value={6} onAdd={[Function: mockConstructor]}>
   <ChainItemWrapper status=\\"habitStatus/paused\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper paused\\" style={{...}}>
-      <ChainItemScore status=\\"habitStatus/paused\\" color=\\"green\\" value={6}>
-        <span className=\\"score-wrapper bright\\" style={{...}}>
-          +6
-        </span>
-      </ChainItemScore>
+      <WithStyles(ChainItemScore) status=\\"habitStatus/paused\\" color=\\"green\\" value={6}>
+        <ChainItemScore classes={{...}} status=\\"habitStatus/paused\\" color=\\"green\\" value={6}>
+          <span className=\\"ChainItemScore-root-1 bright\\" style={{...}}>
+            +6
+          </span>
+        </ChainItemScore>
+      </WithStyles(ChainItemScore)>
       <ChainItemStar value={6} color=\\"green\\">
         <MaterialDesignIcon name=\\"star\\" style={{...}}>
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
@@ -64,11 +70,13 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
 "<ChainItem status=\\"habitStatus/started\\" color=\\"green\\" value={6} onAdd={[Function: mockConstructor]}>
   <ChainItemWrapper status=\\"habitStatus/started\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper start\\" style={{...}}>
-      <ChainItemScore status=\\"habitStatus/started\\" color=\\"green\\" value={6}>
-        <span className=\\"score-wrapper bright\\" style={{...}}>
-          +6
-        </span>
-      </ChainItemScore>
+      <WithStyles(ChainItemScore) status=\\"habitStatus/started\\" color=\\"green\\" value={6}>
+        <ChainItemScore classes={{...}} status=\\"habitStatus/started\\" color=\\"green\\" value={6}>
+          <span className=\\"ChainItemScore-root-1 bright\\" style={{...}}>
+            +6
+          </span>
+        </ChainItemScore>
+      </WithStyles(ChainItemScore)>
       <ChainItemStar value={6} color=\\"green\\">
         <MaterialDesignIcon name=\\"star\\" style={{...}}>
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
@@ -84,11 +92,13 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
 "<ChainItem status=\\"habitStatus/ended\\" color=\\"green\\" value={6} onAdd={[Function: mockConstructor]}>
   <ChainItemWrapper status=\\"habitStatus/ended\\" color=\\"green\\">
     <div className=\\"habit-chain-wrapper end\\" style={{...}}>
-      <ChainItemScore status=\\"habitStatus/ended\\" color=\\"green\\" value={6}>
-        <span className=\\"score-wrapper bright\\" style={{...}}>
-          +6
-        </span>
-      </ChainItemScore>
+      <WithStyles(ChainItemScore) status=\\"habitStatus/ended\\" color=\\"green\\" value={6}>
+        <ChainItemScore classes={{...}} status=\\"habitStatus/ended\\" color=\\"green\\" value={6}>
+          <span className=\\"ChainItemScore-root-1 bright\\" style={{...}}>
+            +6
+          </span>
+        </ChainItemScore>
+      </WithStyles(ChainItemScore)>
       <ChainItemStar value={6} color=\\"green\\">
         <MaterialDesignIcon name=\\"star\\" style={{...}}>
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />
@@ -107,11 +117,13 @@ exports[`Chain Component Chain Component statuses snapshots match snapshot statu
       <div className=\\"custom-background\\" style={{...}} />
       <span className=\\"triangleLeft\\" />
       <span className=\\"triangleRight\\" />
-      <ChainItemScore status=\\"habitStatus/incompleteToday\\" color=\\"green\\" value={6}>
-        <span className=\\"score-wrapper hidden bright\\" style={{...}}>
-          +6
-        </span>
-      </ChainItemScore>
+      <WithStyles(ChainItemScore) status=\\"habitStatus/incompleteToday\\" color=\\"green\\" value={6}>
+        <ChainItemScore classes={{...}} status=\\"habitStatus/incompleteToday\\" color=\\"green\\" value={6}>
+          <span className=\\"ChainItemScore-root-1 hidden bright\\" style={{...}}>
+            +6
+          </span>
+        </ChainItemScore>
+      </WithStyles(ChainItemScore)>
       <ChainItemStar value={6} color=\\"green\\">
         <MaterialDesignIcon name=\\"star\\" style={{...}}>
           <span className=\\"material-icon mdi mdi-star\\" style={{...}} />

@@ -8,13 +8,15 @@ export interface IChainItemScoreProps {
   status: habitStatusesType;
   color: colorsKeys;
   value: number;
+  classes: any;
 }
 
 const ChainItemScore: React.FC<IChainItemScoreProps> = (props) => {
-  const { status, value } = props;
+  const { status, value, classes } = props;
 
   const scoreClass = classNames({
-    'score-wrapper': true,
+    [classes.root]: true,
+    // todo: define are these classes required for functionality
     hidden: (status === habitStatus.incomplete) || (status === habitStatus.incompleteToday) || (!value),
     bright: value > 4,
   });
