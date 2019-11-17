@@ -10,3 +10,11 @@ export function arrayWithout(array: any[], item: any): any[] {
   newArray.splice(index, 1);
   return newArray;
 }
+
+export function fromEntries(iterable: string[][]): {} {
+  return [...iterable].reduce((object, [key, value]) => {
+    // @ts-ignore
+    object[key] = value;
+    return object;
+  }, {});
+}

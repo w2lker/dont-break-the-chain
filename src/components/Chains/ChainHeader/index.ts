@@ -1,2 +1,2 @@
-import ChainHeader from './ChainHeader';
+import ChainHeader from './ChainHeader.decorators';
 export default ChainHeader;

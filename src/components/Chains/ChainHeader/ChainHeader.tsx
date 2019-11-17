@@ -1,12 +1,17 @@
 import * as React from 'react';
 
 import MaterialDesignIcon from '../../basic/Material-Icon';
+import chainHeaderStyles from './ChainHeader.styles';
 
 import { colors } from '../../../contants/colors';
 import { IHabit } from '../../../models/habit';
 
-const ChainHeader: React.FC<IHabit> = (props) => {
-  const { currentChain, longestChain } = props;
+export interface IChainHeaderProps extends IHabit {
+  classes: any;
+}
+
+const ChainHeader: React.FC<IChainHeaderProps> = (props) => {
+  const { currentChain, longestChain, classes } = props;
   // Handling incorrect attributes (empty string etc)
   const icon = props.icon || 'ninja';
   const color = colors[props.color || 'blue'][500];
@@ -17,19 +22,20 @@ const ChainHeader: React.FC<IHabit> = (props) => {
   const longestChainUpdated = areStatsProvided && (longestChain > currentChain) ? longestChain : currentChain;
 
   const renderStats = areStatsProvided ? (
-    <span className="stats">
+    <span className={classes.stats}>
       {`${currentChain}/${longestChainUpdated}`}
     </span>
   ) : null;
 
   return (
-    <div className="habit-header-wrapper">
+    <div className={classes.wrapper}>
       <MaterialDesignIcon
+          className={classes.icon}
         name={icon}
         style={{ color }}
       />
-      <div className="description">
-        <h5 className="name">
+      <div className={classes.description}>
+        <h5 className={classes.name}>
           {name}
         </h5>
         {renderStats}
