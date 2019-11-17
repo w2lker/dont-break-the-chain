@@ -2,8 +2,8 @@ import { styleUtils } from '../../../utils/styleUtils';
 
 const chainHeaderStyles = {
   wrapper: {
-    ...styleUtils.minMaxWidth(170),
-    ...styleUtils.setFlexContainer('flex-start', 'center'),
+    ...styleUtils.widthMinMax(170),
+    ...styleUtils.setFlex('flex-start', 'center'),
     paddingTop: 10,
     paddingBottom: 11,
   },
