@@ -7,7 +7,7 @@ import chainItemWrapperStyles from './ChainItemWrapper.styles';
 import { keys } from '@material-ui/core/styles/createBreakpoints';
 import { colors } from '../../../../contants/colors';
 import { habitStatus } from '../../../../models/habit';
-import { arrayWithout } from '../../../../utils/testUtils';
+import { arrayWithout } from '../../../../utils/testingUtils';
 
 const classes = {
   wrapper: 'chain-item-wrapper',

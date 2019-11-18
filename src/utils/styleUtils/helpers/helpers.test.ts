@@ -1,26 +1,37 @@
+import cases from 'jest-in-case';
+
 import { cleanMap, isParamUndefined } from './helpers';
 
 describe('Test style helpers', () => {
-  it('isParamUndefined works', () => {
-    expect(isParamUndefined(null)).toBeTruthy();
-    expect(isParamUndefined(undefined)).toBeTruthy();
-    expect(isParamUndefined('')).toBeTruthy();
-    expect(isParamUndefined('unset')).toBeTruthy();
-    expect(isParamUndefined(0)).toBeFalsy();
+  describe('isParamUndefined', () => {
+    cases('isParamUndefined cases', (opts) => {
+      expect(isParamUndefined(opts.param)).toBe(opts.response);
+    }, [
+      { name: 'Null is true', param: null, response: true },
+      { name: 'Undefined is true', param: undefined, response: true },
+      { name: '"" is true', param: '', response: true },
+      { name: 'unset is true', param: 'unset', response: true },
+      { name: '0 is false', param: 0, response: false },
+    ]);
   });
-  it('cleanMap works', () => {
-    // @ts-ignore
-    expect(cleanMap()).toEqual({});
-    // @ts-ignore
-    expect(cleanMap(null)).toEqual({});
-    expect(cleanMap({ some: 'unset' })).toEqual({});
-    expect(cleanMap({
+  describe('cleanMap', () => {
+    const sampleDataToSave = {
       a: 1,
+      a0: 0,
       ['undefined']: 23,
+    };
+    const sampleData = {
+      ...sampleDataToSave,
       c: null,
-    })).toEqual({
-      a: 1,
-      ['undefined']: 23,
-    });
+      unset: 'unset',
+    };
+    cases('cleanMap cases', (opts) => {
+      // @ts-ignore
+      expect(cleanMap(opts.input)).toEqual(opts.output);
+    }, [
+      { name: 'Null to empty object', input: null, output: {} },
+      { name: 'Unset to empty object', input: { some: 'unset' }, output: {} },
+      { name: 'SampleData objects', input: sampleData, output: sampleDataToSave },
+    ]);
   });
 });

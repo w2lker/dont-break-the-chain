@@ -1,4 +1,4 @@
-import { arrayWithout } from '../testUtils';
+import { arrayWithout } from '../testingUtils';
 
 describe('arrayWithout function', () => {
   it('works with empty call attributes', () => {
