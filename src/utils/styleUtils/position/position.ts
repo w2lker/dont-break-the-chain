@@ -1,4 +1,5 @@
-import {cleanMap, isParamUndefined} from '../helpers/helpers';
+import { lightGreen } from '@material-ui/core/colors';
+import { boxEdges, cleanMap, isParamUndefined, reduceBoundedEdges } from '../helpers/helpers';
 import { cssAttribute } from '../models';
 
 type PositionName = 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky' | 'inherit' | 'initial' | 'unset' | null;
@@ -21,6 +22,12 @@ export function position(type?: PositionName, config: IPositionConfig = {}) {
   });
 }
 
-export function positionMirrored(type: PositionName, config: cssAttribute = '') {
-  return null;
+export function positionMirrored(type: PositionName, config: string = '') {
+  if (isParamUndefined(type) && isParamUndefined(config)) {
+    return null;
+  }
+  const edges = boxEdges(config) || [];
+  const positionBounds = ['top', 'right', 'bottom', 'left'];
+  const positionParams = reduceBoundedEdges(positionBounds, edges);
+  return position(type, positionParams);
 }
