@@ -1,14 +1,22 @@
-import { borderBottomRadius, borderColor, borderLeftRadius, borderRightRadius, borderTopRadius } from './borders';
+import {
+  borderBottomRadius,
+  borderColor,
+  borderLeftRadius,
+  borderRightRadius,
+  borderStyle,
+  borderTopRadius, borderWidth,
+} from './borders';
 
 describe('borderColor', () => {
   it('works without attributes', () => {
-      // @ts-ignore
-    expect(borderColor()).toBeNull();
+    // @ts-ignore
+    expect(borderColor()).toEqual({});
   });
   it('works with normal attributes', () => {
-    expect(borderColor('#a60b55 #76cd9c null #e8ae1a')).toEqual({
+    expect(borderColor('#a60b55 #76cd9c red #e8ae1a')).toEqual({
       borderTopColor: '#a60b55',
       borderRightColor: '#76cd9c',
+      borderBottomColor: 'red',
       borderLeftColor: '#e8ae1a',
     });
   });
@@ -62,6 +70,35 @@ describe('borderBottomRadius', () => {
     expect(borderBottomRadius('14vw')).toEqual({
       borderBottomLeftRadius: '14vw',
       borderBottomRightRadius: '14vw',
+    });
+  });
+});
+
+describe('borderStyle', () => {
+  it('works without attributes', () => {
+    // @ts-ignore
+    expect(borderStyle()).toEqual({});
+  });
+  it('works with normal attributes', () => {
+    expect(borderStyle('solid dashed null dotted')).toEqual({
+      borderTopStyle: 'solid',
+      borderRightStyle: 'dashed',
+      borderLeftStyle: 'dotted',
+    });
+  });
+});
+
+describe('borderWidth', () => {
+  it('works without attributes', () => {
+    // @ts-ignore
+    expect(borderWidth()).toEqual({});
+  });
+  it('works with normal attributes', () => {
+    expect(borderWidth('15px 54pt inherit 1vw')).toEqual({
+      borderTopWidth: '15px',
+      borderRightWidth: '54pt',
+      borderBottomWidth: 'inherit',
+      borderLeftWidth: '1vw',
     });
   });
 });

@@ -1,16 +1,9 @@
-import { boxEdges, cleanMap, isParamUndefined, reduceBoundedEdges } from '../helpers/helpers';
-import { cssAttribute } from '../models';
+import { boxEdges, cleanMap, generateBoundedEdges, isParamUndefined } from '../helpers/helpers';
+import { BoundAttributeArray, cssAttribute } from '../models';
 
 export function borderColor(colorEdges: string | null) {
-  if (isParamUndefined(colorEdges)) {
-    return null;
-  }
-
-  const borderColorBounds = ['borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor'];
-  const edges = boxEdges(colorEdges);
-  return  cleanMap(
-    reduceBoundedEdges(borderColorBounds, edges),
-  );
+  const borderColorBounds: BoundAttributeArray = ['borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor'];
+  return generateBoundedEdges(borderColorBounds, colorEdges);
 }
 
 const brProps = {
@@ -47,4 +40,14 @@ export function borderRightRadius(value: cssAttribute) {
 
 export function borderBottomRadius(value: cssAttribute) {
   return setBorderRadius([brProps.bottom.left, brProps.bottom.right], value);
+}
+
+export function borderStyle(styleEdges: string | null) {
+  const borderStyleBounds: BoundAttributeArray = ['borderTopStyle', 'borderRightStyle', 'borderBottomStyle', 'borderLeftStyle'];
+  return generateBoundedEdges(borderStyleBounds, styleEdges);
+}
+
+export function borderWidth(widthEdges: string | null) {
+  const widthBounds: BoundAttributeArray = ['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth'];
+  return generateBoundedEdges(widthBounds, widthEdges);
 }

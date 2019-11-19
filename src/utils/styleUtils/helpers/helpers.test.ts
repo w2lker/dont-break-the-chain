@@ -1,6 +1,7 @@
 import cases from 'jest-in-case';
+import { BoundAttributeArray } from '../models';
 
-import { boxEdges, cleanMap, isParamUndefined } from './helpers';
+import { boxEdges, cleanMap, generateBoundedEdges, isParamUndefined } from './helpers';
 
 describe('isParamUndefined', () => {
   const casesTitle = 'isParamUndefined cases';
@@ -142,4 +143,44 @@ describe('boxEdges', () => {
     },
   ];
   cases(casesTitle, casesTester, casesData);
+});
+
+describe('generateBoundedEdges', () => {
+  const keys: BoundAttributeArray = ['attr1', 'attr2', 'attr3', 'attr4'];
+  const config = ['value1', 'value2', 'null', 'value4'];
+  const response = {
+    attr1: config[0],
+    attr2: config[1],
+    attr4: config[3],
+  };
+  beforeAll(() => {
+    // tslint:disable-next-line:no-empty
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+  });
+
+  afterAll(() => {
+    // @ts-ignore
+    // tslint:disable-next-line:no-console
+    console.error.mockRestore();
+  });
+
+  it('works with correct attributes', () => {
+    expect(generateBoundedEdges(keys, config.join(' '))).toEqual(response);
+  });
+  it('works without attributes', () => {
+      // @ts-ignore
+    expect(generateBoundedEdges()).toEqual({});
+  });
+  it('works with incorrect attributes', () => {
+    const newKeys = keys.slice(0, 3);
+    const newConfig = config.concat(config).join(' ');
+    const newResponse = { ...response };
+    // @ts-ignore
+    delete newResponse.attr4;
+    expect(generateBoundedEdges(keys, newConfig)).toEqual({});
+    // tslint:disable-next-line:no-console
+    expect(console.error).toHaveBeenCalledTimes(1);
+    // @ts-ignore
+    expect(generateBoundedEdges(newKeys, config.join(' '))).toEqual(newResponse);
+  });
 });
