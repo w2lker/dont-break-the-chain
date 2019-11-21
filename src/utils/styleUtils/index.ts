@@ -11,6 +11,7 @@ import { clearFix } from './clearfix/clearfix';
 import { ellipsis } from './ellipsis/ellipsis';
 import { setFlex } from './flex/flex';
 import { setFont } from './font/font';
+import { hideText, hideVisually, unhideVisually } from './hide/hide';
 import { position, positionMirrored } from './position/position';
 import { size, widthMinMax } from './size/size';
 
@@ -25,6 +26,9 @@ export const styleUtils = {
   borderStyle,
   borderWidth,
   clearFix,
+  hideText,
+  hideVisually,
+  unhideVisually,
   setFlex,
   setFont,
   size,
