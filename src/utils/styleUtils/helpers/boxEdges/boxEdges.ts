@@ -14,7 +14,7 @@ export function boxEdges(composed: string | null): BoundAttributeArray | null {
       return split;
     case 3:
       // @ts-ignore
-      return split.concat(split[0]);
+      return split.concat(split[1]);
     case 2:
       // @ts-ignore
       return split.concat(split);

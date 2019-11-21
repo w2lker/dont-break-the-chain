@@ -41,7 +41,7 @@ const casesData = [
   {
     name: 'For 3 params',
     input: '14px 45px 2em',
-    output: ['14px', '45px', '2em', '14px'],
+    output: ['14px', '45px', '2em', '45px'],
     mocks: 0,
   },
   {
