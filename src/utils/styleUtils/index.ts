@@ -34,6 +34,7 @@ export const bon = {
   borderStyle,
   borderWidth,
   clearFix,
+  ellipsis,
   hideText,
   hideVisually,
   unhideVisually,

@@ -1,5 +1,5 @@
 
-import { boxEdges, cleanMap, getBoundedEdges, isParamUndefined } from '../helpers/';
+import { cleanMap, getBoundedEdges } from '../helpers/';
 import { BoundAttributeArray, cssAttribute } from '../models';
 
 export function borderColor(colorEdges: string | null) {
