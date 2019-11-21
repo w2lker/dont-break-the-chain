@@ -17,6 +17,18 @@ import { size, widthMinMax } from './size/size';
 
 type cssAttribute = number | string;
 
+// TODO: produce 'modular scale'
+// TODO: produce 'overflow-wrap'
+// TODO: produce 'padding'
+// TODO: produce 'shade'
+// TODO: produce 'modular scale'
+// TODO: produce 'modular scale'
+// TODO: produce 'triangle' functions
+// TODO: produce color 'shade' calculation
+// TODO: produce color 'tint' calculation
+
+// TODO: define what we are doing with prefixer and value-prefixer
+
 export const styleUtils = {
   borderColor,
   borderTopRadius,
