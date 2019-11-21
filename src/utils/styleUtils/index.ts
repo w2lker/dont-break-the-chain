@@ -19,10 +19,6 @@ type cssAttribute = number | string;
 
 // TODO: produce 'modular scale'
 // TODO: produce 'overflow-wrap'
-// TODO: produce 'padding'
-// TODO: produce 'shade'
-// TODO: produce 'modular scale'
-// TODO: produce 'modular scale'
 // TODO: produce 'triangle' functions
 // TODO: produce color 'shade' calculation
 // TODO: produce color 'tint' calculation
