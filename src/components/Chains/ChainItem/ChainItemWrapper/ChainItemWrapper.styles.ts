@@ -1,4 +1,4 @@
-import { styleUtils } from '../../../../utils/styleUtils';
+import { bon } from '../../../../utils/styleUtils';
 
 const wrapperAsideBorders = '40px solid transparent';
 const wrapperTopBorders = '10px solid #ffffff';
@@ -14,7 +14,7 @@ const chainItemWrapperStyles = {
     '&:before': {
       content: '""',
       display: 'block',
-      ...styleUtils.position('absolute', {
+      ...bon.position('absolute', {
         top: 0,
         right: 0,
         left: 0,
@@ -28,7 +28,7 @@ const chainItemWrapperStyles = {
     '&:before': {
       content: '""',
       display: 'block',
-      ...styleUtils.position('absolute', {
+      ...bon.position('absolute', {
         right: 0,
         bottom: 0,
       }),
@@ -38,7 +38,7 @@ const chainItemWrapperStyles = {
     '&.after': {
       content: '""',
       display: 'block',
-      ...styleUtils.position('absolute', {
+      ...bon.position('absolute', {
         bottom: 0,
         left: 0,
       }),
@@ -51,7 +51,7 @@ const chainItemWrapperStyles = {
     '&:before': {
       content: '""',
       display: 'block',
-      ...styleUtils.position('absolute', {
+      ...bon.position('absolute', {
         right: 0,
         bottom: 0,
       }),
@@ -61,7 +61,7 @@ const chainItemWrapperStyles = {
     '&:after': {
       content: '""',
       display: 'block',
-      ...styleUtils.position('absolute', {
+      ...bon.position('absolute', {
         bottom: 0,
         left: 0,
       }),
@@ -73,7 +73,7 @@ const chainItemWrapperStyles = {
     position: 'relative',
   },
   customBackground: {
-    ...styleUtils.position('absolute', {
+    ...bon.position('absolute', {
       top: -12,
       right: 0,
       bottom: 0,
@@ -83,7 +83,7 @@ const chainItemWrapperStyles = {
   },
   triangleItem: {
     zIndex: 10,
-    ...styleUtils.position('absolute', {
+    ...bon.position('absolute', {
       top: -12,
     }),
     borderBottom: '12px solid',

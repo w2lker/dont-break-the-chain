@@ -1,11 +1,10 @@
-import { styleUtils } from '../../../../utils/styleUtils';
+import { bon } from '../../../../utils/styleUtils';
 
 const chainItemScoreStyles = {
   root: {
-    ...styleUtils.widthMinMax(70),
-    ...styleUtils.setFont(14, '#C2CCD1', 500, '0.1px'),
-    textAlign: 'center',
-    lineHeight: 24,
+    ...bon.widthMinMax(70),
+    ...bon.setFont(14, 'unset', 700, '0.1px'),
+    lineHeight: 54,
   },
 };
 

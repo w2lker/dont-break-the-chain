@@ -25,7 +25,7 @@ type cssAttribute = number | string;
 
 // TODO: define what we are doing with prefixer and value-prefixer
 
-export const styleUtils = {
+export const bon = {
   borderColor,
   borderTopRadius,
   borderRightRadius,
