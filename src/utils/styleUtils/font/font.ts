@@ -1,4 +1,4 @@
-import { cleanMap, isParamUndefined } from '../helpers/helpers';
+import { cleanMap, isParamUndefined } from '../helpers';
 import { cssAttribute } from '../models';
 
 export function setFont(fontSize: cssAttribute, color: string, fontWeight: cssAttribute, letterSpacing: cssAttribute) {

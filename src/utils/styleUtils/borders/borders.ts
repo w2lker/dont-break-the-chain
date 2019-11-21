@@ -1,9 +1,10 @@
-import { boxEdges, cleanMap, generateBoundedEdges, isParamUndefined } from '../helpers/helpers';
+
+import { boxEdges, cleanMap, getBoundedEdges, isParamUndefined } from '../helpers/';
 import { BoundAttributeArray, cssAttribute } from '../models';
 
 export function borderColor(colorEdges: string | null) {
   const borderColorBounds: BoundAttributeArray = ['borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor'];
-  return generateBoundedEdges(borderColorBounds, colorEdges);
+  return getBoundedEdges(borderColorBounds, colorEdges);
 }
 
 const brProps = {
@@ -44,10 +45,10 @@ export function borderBottomRadius(value: cssAttribute) {
 
 export function borderStyle(styleEdges: string | null) {
   const borderStyleBounds: BoundAttributeArray = ['borderTopStyle', 'borderRightStyle', 'borderBottomStyle', 'borderLeftStyle'];
-  return generateBoundedEdges(borderStyleBounds, styleEdges);
+  return getBoundedEdges(borderStyleBounds, styleEdges);
 }
 
 export function borderWidth(widthEdges: string | null) {
   const widthBounds: BoundAttributeArray = ['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth'];
-  return generateBoundedEdges(widthBounds, widthEdges);
+  return getBoundedEdges(widthBounds, widthEdges);
 }

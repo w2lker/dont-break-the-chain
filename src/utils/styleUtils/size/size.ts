@@ -1,4 +1,4 @@
-import { cleanMap, isParamUndefined } from '../helpers/helpers';
+import { cleanMap, isParamUndefined } from '../helpers';
 
 import { cssAttribute } from '../models';
 

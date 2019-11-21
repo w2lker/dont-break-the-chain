@@ -1,4 +1,4 @@
-import { cleanMap, generateBoundedEdges, isParamUndefined } from '../helpers/helpers';
+import { cleanMap, getBoundedEdges, isParamUndefined } from '../helpers';
 import { BoundAttributeArray, cssAttribute } from '../models';
 
 type PositionName = 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky' | 'inherit' | 'initial' | 'unset' | null;
@@ -26,7 +26,7 @@ export function positionMirrored(type: PositionName, config: string = '') {
     return null;
   }
   const positionBounds: BoundAttributeArray = ['top', 'right', 'bottom', 'left'];
-  const edges = generateBoundedEdges(positionBounds, config);
+  const edges = getBoundedEdges(positionBounds, config);
   return cleanMap({
     ...edges,
     position: type,

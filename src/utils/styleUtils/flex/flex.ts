@@ -1,4 +1,5 @@
-import { cleanMap } from '../helpers/helpers';
+import { cleanMap } from '../helpers';
+
 type justifyContentOptions =
     // Positional alignment
     'center' | 'start' | 'end' | 'flex-start' | 'flex-end' | 'left' | 'right' | 'normal' |

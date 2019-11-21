@@ -4,8 +4,11 @@ import {
   borderLeftRadius,
   borderRightRadius,
   borderStyle,
-  borderTopRadius, borderWidth,
+  borderTopRadius,
+  borderWidth,
 } from './borders/borders';
+import { clearFix } from './clearfix/clearfix';
+import { ellipsis } from './ellipsis/ellipsis';
 import { setFlex } from './flex/flex';
 import { setFont } from './font/font';
 import { position, positionMirrored } from './position/position';
@@ -14,12 +17,20 @@ import { size, widthMinMax } from './size/size';
 type cssAttribute = number | string;
 
 export const styleUtils = {
-  size,
-  widthMinMax,
+  borderColor,
+  borderTopRadius,
+  borderRightRadius,
+  borderBottomRadius,
+  borderLeftRadius,
+  borderStyle,
+  borderWidth,
+  clearFix,
   setFlex,
   setFont,
+  size,
   position,
   positionMirrored,
+  widthMinMax,
   border: {
     color: borderColor,
     radius: {
