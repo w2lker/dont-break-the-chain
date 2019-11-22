@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationMenu match snapshot 1`] = `
+"<MemoryRouter>
+  <Router history={{...}}>
+    <NavigationMenu classes={{...}}>
+      <div className=\\"navigation-menu-root\\">
+        <WithStyles(ForwardRef(BottomNavigation))>
+          <ForwardRef(BottomNavigation) classes={{...}}>
+            <div className=\\"MuiBottomNavigation-root\\">
+              <WithStyles(NavigationMenuItem) url=\\"/chains\\" label=\\"Chains\\" icon=\\"layers\\" classes={{...}} selected={false} showLabel={false} value={0} onChange={[undefined]}>
+                <NavigationMenuItem classes={{...}} url=\\"/chains\\" label=\\"Chains\\" icon=\\"layers\\" selected={false} showLabel={false} value={0} onChange={[undefined]}>
+                  <WithStyles(ForwardRef(BottomNavigationAction)) classes={{...}} component={[function]} to=\\"/chains\\" label=\\"Chains\\" icon={{...}} showLabel={true}>
+                    <ForwardRef(BottomNavigationAction) classes={{...}} component={[function]} to=\\"/chains\\" label=\\"Chains\\" icon={{...}} showLabel={true}>
+                      <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" focusRipple={true} onClick={[Function: handleChange]} component={[function]} to=\\"/chains\\">
+                        <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" focusRipple={true} onClick={[Function: handleChange]} component={[function]} to=\\"/chains\\">
+                          <DecoratedNavLink className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} to=\\"/chains\\">
+                            <NavLink className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} to=\\"/chains\\" activeClassName=\\"Mui-selected\\">
+                              <Link aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} to={{...}} onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false}>
+                                <LinkAnchor aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} href=\\"/chains\\" navigate={[Function: navigate]}>
+                                  <a aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} onBlur={[Function]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} href=\\"/chains\\" onClick={[Function: onClick]}>
+                                    <span className=\\"MuiBottomNavigationAction-wrapper\\">
+                                      <MaterialDesignIcon className=\\"NavigationMenuItem-icon-4\\" name=\\"layers\\">
+                                        <span className=\\"material-icon mdi mdi-layers NavigationMenuItem-icon-4\\" style={[undefined]} />
+                                      </MaterialDesignIcon>
+                                      <span className=\\"MuiBottomNavigationAction-label NavigationMenuItem-label-3\\">
+                                        Chains
+                                      </span>
+                                    </span>
+                                    <NoSsr>
+                                      <WithStyles(undefined) center={false}>
+                                        <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                                          <span className=\\"MuiTouchRipple-root\\">
+                                            <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                          </span>
+                                        </ForwardRef(TouchRipple)>
+                                      </WithStyles(undefined)>
+                                    </NoSsr>
+                                  </a>
+                                </LinkAnchor>
+                              </Link>
+                            </NavLink>
+                          </DecoratedNavLink>
+                        </ForwardRef(ButtonBase)>
+                      </WithStyles(ForwardRef(ButtonBase))>
+                    </ForwardRef(BottomNavigationAction)>
+                  </WithStyles(ForwardRef(BottomNavigationAction))>
+                </NavigationMenuItem>
+              </WithStyles(NavigationMenuItem)>
+              <WithStyles(NavigationMenuItem) url=\\"/habit\\" label=\\"Habits\\" icon=\\"flag-checkered\\" classes={{...}} selected={false} showLabel={false} value={1} onChange={[undefined]}>
+                <NavigationMenuItem classes={{...}} url=\\"/habit\\" label=\\"Habits\\" icon=\\"flag-checkered\\" selected={false} showLabel={false} value={1} onChange={[undefined]}>
+                  <WithStyles(ForwardRef(BottomNavigationAction)) classes={{...}} component={[function]} to=\\"/habit\\" label=\\"Habits\\" icon={{...}} showLabel={true}>
+                    <ForwardRef(BottomNavigationAction) classes={{...}} component={[function]} to=\\"/habit\\" label=\\"Habits\\" icon={{...}} showLabel={true}>
+                      <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" focusRipple={true} onClick={[Function: handleChange]} component={[function]} to=\\"/habit\\">
+                        <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" focusRipple={true} onClick={[Function: handleChange]} component={[function]} to=\\"/habit\\">
+                          <DecoratedNavLink className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} to=\\"/habit\\">
+                            <NavLink className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} to=\\"/habit\\" activeClassName=\\"Mui-selected\\">
+                              <Link aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} to={{...}} onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false}>
+                                <LinkAnchor aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} href=\\"/habit\\" navigate={[Function: navigate]}>
+                                  <a aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} onBlur={[Function]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} href=\\"/habit\\" onClick={[Function: onClick]}>
+                                    <span className=\\"MuiBottomNavigationAction-wrapper\\">
+                                      <MaterialDesignIcon className=\\"NavigationMenuItem-icon-4\\" name=\\"flag-checkered\\">
+                                        <span className=\\"material-icon mdi mdi-flag-checkered NavigationMenuItem-icon-4\\" style={[undefined]} />
+                                      </MaterialDesignIcon>
+                                      <span className=\\"MuiBottomNavigationAction-label NavigationMenuItem-label-3\\">
+                                        Habits
+                                      </span>
+                                    </span>
+                                    <NoSsr>
+                                      <WithStyles(undefined) center={false}>
+                                        <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                                          <span className=\\"MuiTouchRipple-root\\">
+                                            <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                          </span>
+                                        </ForwardRef(TouchRipple)>
+                                      </WithStyles(undefined)>
+                                    </NoSsr>
+                                  </a>
+                                </LinkAnchor>
+                              </Link>
+                            </NavLink>
+                          </DecoratedNavLink>
+                        </ForwardRef(ButtonBase)>
+                      </WithStyles(ForwardRef(ButtonBase))>
+                    </ForwardRef(BottomNavigationAction)>
+                  </WithStyles(ForwardRef(BottomNavigationAction))>
+                </NavigationMenuItem>
+              </WithStyles(NavigationMenuItem)>
+              <WithStyles(NavigationMenuItem) url=\\"/account\\" label=\\"Profile\\" icon=\\"account\\" classes={{...}} selected={false} showLabel={false} value={2} onChange={[undefined]}>
+                <NavigationMenuItem classes={{...}} url=\\"/account\\" label=\\"Profile\\" icon=\\"account\\" selected={false} showLabel={false} value={2} onChange={[undefined]}>
+                  <WithStyles(ForwardRef(BottomNavigationAction)) classes={{...}} component={[function]} to=\\"/account\\" label=\\"Profile\\" icon={{...}} showLabel={true}>
+                    <ForwardRef(BottomNavigationAction) classes={{...}} component={[function]} to=\\"/account\\" label=\\"Profile\\" icon={{...}} showLabel={true}>
+                      <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" focusRipple={true} onClick={[Function: handleChange]} component={[function]} to=\\"/account\\">
+                        <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" focusRipple={true} onClick={[Function: handleChange]} component={[function]} to=\\"/account\\">
+                          <DecoratedNavLink className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} to=\\"/account\\">
+                            <NavLink className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} to=\\"/account\\" activeClassName=\\"Mui-selected\\">
+                              <Link aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} to={{...}} onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false}>
+                                <LinkAnchor aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} onBlur={[Function]} onClick={[Function: handleChange]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} href=\\"/account\\" navigate={[Function: navigate]}>
+                                  <a aria-current={{...}} className=\\"MuiButtonBase-root MuiBottomNavigationAction-root NavigationMenuItem-root-2\\" style={[undefined]} onBlur={[Function]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} role=\\"button\\" aria-disabled={false} href=\\"/account\\" onClick={[Function: onClick]}>
+                                    <span className=\\"MuiBottomNavigationAction-wrapper\\">
+                                      <MaterialDesignIcon className=\\"NavigationMenuItem-icon-4\\" name=\\"account\\">
+                                        <span className=\\"material-icon mdi mdi-account NavigationMenuItem-icon-4\\" style={[undefined]} />
+                                      </MaterialDesignIcon>
+                                      <span className=\\"MuiBottomNavigationAction-label NavigationMenuItem-label-3\\">
+                                        Profile
+                                      </span>
+                                    </span>
+                                    <NoSsr>
+                                      <WithStyles(undefined) center={false}>
+                                        <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                                          <span className=\\"MuiTouchRipple-root\\">
+                                            <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                          </span>
+                                        </ForwardRef(TouchRipple)>
+                                      </WithStyles(undefined)>
+                                    </NoSsr>
+                                  </a>
+                                </LinkAnchor>
+                              </Link>
+                            </NavLink>
+                          </DecoratedNavLink>
+                        </ForwardRef(ButtonBase)>
+                      </WithStyles(ForwardRef(ButtonBase))>
+                    </ForwardRef(BottomNavigationAction)>
+                  </WithStyles(ForwardRef(BottomNavigationAction))>
+                </NavigationMenuItem>
+              </WithStyles(NavigationMenuItem)>
+            </div>
+          </ForwardRef(BottomNavigation)>
+        </WithStyles(ForwardRef(BottomNavigation))>
+      </div>
+    </NavigationMenu>
+  </Router>
+</MemoryRouter>"
+`;

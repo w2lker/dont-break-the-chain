@@ -17,6 +17,8 @@ import { size, widthMinMax } from './size/size';
 
 type cssAttribute = number | string;
 
+// TODO: add flex-direction prop to setFlex
+
 // TODO: produce 'modular scale'
 // TODO: produce 'overflow-wrap'
 // TODO: produce 'triangle' functions
