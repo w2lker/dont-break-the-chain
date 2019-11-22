@@ -1,9 +1,9 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import sampleReducer from './sampleReducer';
+import profileReducer from './profileReducer';
 
 const reducers = {
-  sample: sampleReducer,
+  profile: profileReducer,
 };
 
 const store = applyMiddleware(thunk)(createStore)(combineReducers(reducers));
