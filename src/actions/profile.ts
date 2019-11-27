@@ -42,9 +42,9 @@ export function getProfileError(errorData: any) {
 }
 
 export function getProfile() {
-  return (dispatch: (arg0: { type: string; payload?: any; }) => void) => {
+  return (dispatch: any): any => {
     dispatch(getProfileStarted());
-    fakeApi.getProfile().then((response) => {
+    return fakeApi.getProfile().then((response) => {
       // @ts-ignore
       dispatch(getProfileSuccess(response.data));
     }).catch((response) => {

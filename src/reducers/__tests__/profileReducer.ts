@@ -22,7 +22,7 @@ describe('profileReducer', () => {
   it('should handle PROFILE_GET_ACTIVE', () => {
     const state = {
       ...initialState,
-      profileRequest: requestStatuses.success,
+      profileRequest: null,
       errorMessage: 'Another error message',
     };
     // @ts-ignore
@@ -38,7 +38,7 @@ describe('profileReducer', () => {
     const message = 'The error message';
     const state = {
       ...initialState,
-      profileRequest: requestStatuses.success,
+      profileRequest: requestStatuses.active,
       errorMessage: 'Another error message',
     };
     // @ts-ignore

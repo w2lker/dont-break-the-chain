@@ -6,5 +6,6 @@ const reducers = {
   profile: profileReducer,
 };
 
+// @ts-ignore
 const store = applyMiddleware(thunk)(createStore)(combineReducers(reducers));
 export default store;

@@ -1,5 +1,4 @@
 import { List } from 'immutable';
-import { act } from 'react-dom/test-utils';
 import { ActionsProfile, PROFILE_GET_ACTIVE, PROFILE_GET_ERROR, PROFILE_GET_SUCCESS } from '../actions/profile';
 import { requestStatuses } from '../contants/general';
 import { IProfileReducer } from '../models/profile';
