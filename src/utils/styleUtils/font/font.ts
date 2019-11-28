@@ -1,6 +1,7 @@
 import { cleanMap, isParamUndefined } from '../helpers';
 import { cssAttribute } from '../models';
 
+// TODO: add fields as optional to improve usage experience
 export function setFont(fontSize: cssAttribute, color: string, fontWeight: cssAttribute, letterSpacing: cssAttribute) {
   if (isParamUndefined(fontSize) && isParamUndefined(color) && isParamUndefined(fontWeight) && isParamUndefined(letterSpacing)) {
     return null;

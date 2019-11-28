@@ -8,6 +8,15 @@ const defaultTexts = {
     header: {
       title: 'Profile',
     },
+    stats: {
+      total: {
+        description: 'points received',
+      },
+      days: {
+        subtitle: 'days',
+        description: 'longest chain',
+      },
+    },
   },
 };
 

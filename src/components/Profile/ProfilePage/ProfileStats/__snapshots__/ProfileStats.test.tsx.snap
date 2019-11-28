@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileStats component match snapshot 1`] = `
+"<div className=\\"profile-stats-wrapper\\">
+  <div className=\\"profile-stats-stat-wrapper\\">
+    <h4 className=\\"profile-stats-stat-value\\">
+      1453
+    </h4>
+    <p className=\\"profile-stats-stat-description\\">
+      points received
+    </p>
+  </div>
+  <div className=\\"profile-stats-stat-wrapper\\">
+    <h4 className=\\"profile-stats-stat-value\\">
+      33
+       
+      <span className=\\"profile-stats-stat-subtitle\\">
+        days
+      </span>
+    </h4>
+    <p className=\\"profile-stats-stat-description\\">
+      longest chain
+    </p>
+  </div>
+</div>"
+`;
