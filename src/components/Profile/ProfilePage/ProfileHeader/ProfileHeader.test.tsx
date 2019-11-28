@@ -1,5 +1,6 @@
-import { mount, shallow } from 'enzyme';
 import * as React from 'react';
+
+import { mount, shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
@@ -8,7 +9,7 @@ import defaultTexts from '../../../../contants/defaultTexts';
 
 import ProfileHeader, { IProfileHeaderProps } from './ProfileHeader';
 import ProfileHeaderDecorated from './ProfileHeader.decorators';
-import profileHeaderStyles from './profileHeader.styles';
+import profileHeaderStyles from './ProfileHeader.styles';
 
 const classes = {
   root: 'profile-header-root',

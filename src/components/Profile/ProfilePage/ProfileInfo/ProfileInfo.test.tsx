@@ -1,9 +1,15 @@
 import * as React from 'react';
 
 import { mount, shallow } from 'enzyme';
+import cases from 'jest-in-case';
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { routing } from '../../../../contants/routing';
 
 import { avatarPlaceholder } from '../../../../contants/ui';
 import ProfileInfo, { IProfileInfoProps } from './ProfileInfo';
+import ProfileInfoDecorated from './ProfileInfo.decorators';
 import profileInfoStyles from './ProfileInfo.styles';
 
 const classes = {
@@ -98,6 +104,47 @@ describe('ProfileInfo styles', () => {
 });
 
 describe('ProfileInfo decorators', () => {
-  test.todo('Check classes to be passed to the child component');
-  test.todo('Check data to be passed from redux store (avatar, name, mail)');
+  const middleware = [thunk];
+  const mockStore = configureMockStore(middleware);
+  const storeState = {
+    profile: {
+      avatar: './some-avatar.png',
+      name: 'Sandra Adams',
+      email: 'purchasenow@gmail.com',
+    },
+  };
+
+  const store = mockStore(storeState);
+  const component = mount(
+    <Provider store={store}>
+      <ProfileInfoDecorated />
+    </Provider>,
+  );
+
+  const props = component.find('ProfileInfo').props();
+
+  it('provides styled classes from decorators', () => {
+    // @ts-ignore
+    const assignedClasses = props.classes;
+    classesKeys.forEach((keyValue) => {
+      // @ts-ignore
+      expect(assignedClasses[keyValue]).toBeDefined();
+    });
+  });
+
+  const casesTitle = 'Testing mapper from connected store to props';
+  const casesTester = (opts: typeof casesData[0]) => {
+    // @ts-ignore
+    expect(props[opts.identifier]).toBeDefined();
+    // @ts-ignore
+    expect(props[opts.identifier]).toBe(storeState.profile[opts.identifier]);
+  };
+
+  const casesData = [
+    { name: '"name" is passed', identifier: 'name' },
+    { name: '"email" is passed', identifier: 'email' },
+    { name: '"avatar" is passed', identifier: 'avatar' },
+  ];
+
+  cases(casesTitle, casesTester, casesData);
 });
