@@ -4,6 +4,11 @@ const defaultTexts = {
     habits: 'Habits',
     profile: 'Profile',
   },
+  profile: {
+    header: {
+      title: 'Profile',
+    },
+  },
 };
 
 export default defaultTexts;

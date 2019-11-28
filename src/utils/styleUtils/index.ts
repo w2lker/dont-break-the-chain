@@ -12,6 +12,8 @@ import { ellipsis } from './ellipsis/ellipsis';
 import { setFlex } from './flex/flex';
 import { setFont } from './font/font';
 import { hideText, hideVisually, unhideVisually } from './hide/hide';
+import { margin } from './margin/margin';
+import { padding } from './padding/padding';
 import { position, positionMirrored } from './position/position';
 import { size, widthMinMax } from './size/size';
 
@@ -37,6 +39,7 @@ export const bon = {
   borderWidth,
   clearFix,
   ellipsis,
+  margin,
   hideText,
   hideVisually,
   unhideVisually,
@@ -44,6 +47,7 @@ export const bon = {
   setFont,
   size,
   position,
+  padding,
   positionMirrored,
   widthMinMax,
   border: {

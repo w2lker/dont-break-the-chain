@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileInfo component match snapshot 1`] = `
+"<ProfileInfo classes={{...}} avatar=\\"./some-avatar.png\\" name=\\"Sandra Adams\\" email=\\"purchasenow@gmail.com\\">
+  <div className=\\"profile-info-wrapper\\">
+    <div className=\\"profile-info-avatar\\" style={{...}} />
+    <h2 className=\\"profile-info-name\\">
+      Sandra Adams
+    </h2>
+    <p className=\\"profile-info-email\\">
+      purchasenow@gmail.com
+    </p>
+  </div>
+</ProfileInfo>"
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Header Component match snapshot 1`] = `
+"<ProfileHeader classes={{...}} logout={[Function: mockConstructor]}>
+  <div className=\\"profile-header-root\\">
+    <h3 className=\\"profile-header-title\\">
+      Profile
+    </h3>
+    <WithStyles(ForwardRef(IconButton)) className=\\"profile-header-button\\" onClick={[Function: mockConstructor]}>
+      <ForwardRef(IconButton) classes={{...}} className=\\"profile-header-button\\" onClick={[Function: mockConstructor]}>
+        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root profile-header-button\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: mockConstructor]}>
+          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root profile-header-button\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: mockConstructor]}>
+            <button className=\\"MuiButtonBase-root MuiIconButton-root profile-header-button\\" onBlur={[Function]} onClick={[Function: mockConstructor]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} type=\\"button\\" disabled={false}>
+              <span className=\\"MuiIconButton-label\\">
+                <MaterialDesignIcon name=\\"logout\\" className=\\"header-icon\\">
+                  <span className=\\"material-icon mdi mdi-logout header-icon\\" style={[undefined]} />
+                </MaterialDesignIcon>
+              </span>
+              <NoSsr>
+                <WithStyles(undefined) center={true}>
+                  <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                    <span className=\\"MuiTouchRipple-root\\">
+                      <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                    </span>
+                  </ForwardRef(TouchRipple)>
+                </WithStyles(undefined)>
+              </NoSsr>
+            </button>
+          </ForwardRef(ButtonBase)>
+        </WithStyles(ForwardRef(ButtonBase))>
+      </ForwardRef(IconButton)>
+    </WithStyles(ForwardRef(IconButton))>
+  </div>
+</ProfileHeader>"
+`;

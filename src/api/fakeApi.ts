@@ -20,6 +20,9 @@ class Api {
   getProfile() {
     return fakeFetch(profile);
   }
+  logout() {
+    return fakeFetch({ status: 200 });
+  }
 }
 
 export default new Api();
