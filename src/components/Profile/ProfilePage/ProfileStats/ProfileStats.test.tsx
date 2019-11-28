@@ -1,7 +1,13 @@
 import React from 'react';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
+import cases from 'jest-in-case';
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+
 import ProfileStats, { IProfileStatsProps } from './ProfileStats';
+import ProfileStatsDecorated from './ProfileStats.decorators';
 import profileStatsStyles from './ProfileStats.styles';
 
 const classes = {
@@ -102,6 +108,44 @@ describe('ProfileStats styles', () => {
 });
 
 describe('ProfileStats decorators', () => {
-  test.todo('Test if all classes are passed to component');
-  test.todo('Test if score and days are passed from connected store');
+  const middleware = [thunk];
+  const mockStore = configureMockStore(middleware);
+  const storeState = {
+    profile: {
+      points: 1234,
+      longestChain: 14,
+    },
+  };
+  const store = mockStore(storeState);
+
+  const component = mount(
+    <Provider store={store}>
+      <ProfileStatsDecorated/>
+    </Provider>,
+  );
+  const props = component.find('ProfileStats').props();
+
+  it('provides styled classes', () => {
+    // @ts-ignore
+    const assignedClasses = props.classes;
+    classesKeys.forEach((keyValue) => {
+      // @ts-ignore
+      expect(assignedClasses[keyValue]).toBeDefined();
+    });
+  });
+
+  const casesTitle = 'Testing mapper from connected store to props';
+  const casesTester = (opts: typeof casesData[0]) => {
+    // @ts-ignore
+    expect(props[opts.target]).toBeDefined();
+    // @ts-ignore
+    expect(props[opts.target]).toBe(storeState.profile[opts.source]);
+  };
+
+  const casesData = [
+    { name: '"total" is passed', source: 'points', target: 'total' },
+    { name: '"days" is passed', source: 'longestChain', target: 'days' },
+  ];
+
+  cases(casesTitle, casesTester, casesData);
 });

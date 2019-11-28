@@ -5,7 +5,6 @@ import cases from 'jest-in-case';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { routing } from '../../../../contants/routing';
 
 import { avatarPlaceholder } from '../../../../contants/ui';
 import ProfileInfo, { IProfileInfoProps } from './ProfileInfo';

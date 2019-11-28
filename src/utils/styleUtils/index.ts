@@ -29,6 +29,8 @@ type cssAttribute = number | string;
 
 // TODO: define what we are doing with prefixer and value-prefixer
 
+// TODO: provide functions return so styled decorators would know that these are valid css props
+
 export const bon = {
   borderColor,
   borderTopRadius,
