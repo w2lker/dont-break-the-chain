@@ -21,7 +21,7 @@ const profileStatsStyles = {
   statDescription: {
     ...bon.setFont(14, 'rgba(38, 50, 40, 0.72)', 400, '0.25px'),
     margin: 0,
-    lineHeight: 20,
+    lineHeight: '20px',
   },
 };
 

@@ -15,11 +15,12 @@ const profileInfoStyles = {
   name: {
     ...bon.setFont(20, '#263228', 500, '0.15px'),
     margin: '12px 0 0',
-    lineHeight: 24,
+    lineHeight: '24px',
   },
   email: {
-    ...bon.setFont(20, 'rgba(38, 50, 56, 0.72)', 500, '0.15px'),
-    lineHeight: 20,
+    ...bon.setFont(14, 'rgba(38, 50, 56, 0.72)', 500, '0.15px'),
+    lineHeight: '20px',
+    margin: 0,
   },
 };
 
