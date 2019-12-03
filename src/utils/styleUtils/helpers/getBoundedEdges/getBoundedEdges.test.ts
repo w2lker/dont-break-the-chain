@@ -1,17 +1,6 @@
 import { BoundAttributeArray } from '../../models';
 import { getBoundedEdges } from './getBoundedEdges';
 
-beforeAll(() => {
-  // tslint:disable-next-line:no-empty
-  jest.spyOn(console, 'error').mockImplementation(() => {});
-});
-
-afterAll(() => {
-  // @ts-ignore
-  // tslint:disable-next-line:no-console
-  console.error.mockRestore();
-});
-
 const keys: BoundAttributeArray = ['attr1', 'attr2', 'attr3', 'attr4'];
 
 const config = ['value1', 'value2', 'null', 'value4'];
@@ -25,19 +14,21 @@ const response = {
 it('works with correct attributes', () => {
   expect(getBoundedEdges(keys, config.join(' '))).toEqual(response);
 });
+
 it('works without attributes', () => {
     // @ts-ignore
   expect(getBoundedEdges()).toEqual({});
 });
+
 it('works with incorrect attributes', () => {
-  const newKeys = keys.slice(0, 3);
+  const newKeys = keys.slice(0, 3) as BoundAttributeArray;
   const newConfig = config.concat(config).join(' ');
   const newResponse = { ...response };
-    // @ts-ignore
   delete newResponse.attr4;
-  expect(getBoundedEdges(keys, newConfig)).toEqual({});
-    // tslint:disable-next-line:no-console
-  expect(console.error).toHaveBeenCalledTimes(1);
-    // @ts-ignore
+  try {
+    getBoundedEdges(keys, newConfig);
+  } catch (e) {
+    expect(e.message).toContain('Params error');
+  }
   expect(getBoundedEdges(newKeys, config.join(' '))).toEqual(newResponse);
 });

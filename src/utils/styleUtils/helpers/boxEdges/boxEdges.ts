@@ -5,12 +5,11 @@ export function boxEdges(composed: string | null): BoundAttributeArray | null {
     return null;
   }
   // in case long string has been provided take reasonable part of it
-  const boundes = composed.substr(0, 1000).trim().replace(/\s{2,}/g, ' ');
-  const split: string[] = boundes.split(' ');
+  const bounds = composed.substr(0, 1000).trim().replace(/\s{2,}/g, ' ');
+  const split = bounds.split(' ') as BoundAttributeArray;
 
   switch (split.length) {
     case 4:
-      // @ts-ignore
       return split;
     case 3:
       // @ts-ignore
@@ -22,8 +21,6 @@ export function boxEdges(composed: string | null): BoundAttributeArray | null {
       // @ts-ignore
       return Array(4).fill(split[0]);
     default:
-      // tslint:disable-next-line:no-console
-      console.error(`Params error: expected to receive from 1 to 4 entries, but found ${split.length} entries. Please check input data`);
-      return null;
+      throw new Error(`Params error: expected to receive from 1 to 4 entries, but found ${split.length} entries. Please check input data`);
   }
 }
