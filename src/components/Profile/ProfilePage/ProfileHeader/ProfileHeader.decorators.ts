@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch: Dispatch<any>) => {
 // @ts-ignore
 const connectedComponent = connect(mapStateToProps, mapDispatchToProps)(ProfileHeader);
 
-// @ts-ignore
+
 const styledComponent = withStyles(profileHeaderStyles)(connectedComponent);
 
 export default styledComponent;

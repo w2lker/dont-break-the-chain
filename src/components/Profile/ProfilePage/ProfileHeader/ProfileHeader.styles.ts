@@ -1,6 +1,7 @@
+import { Styles } from '@material-ui/styles/withStyles';
 import { bon } from '../../../../utils/styleUtils';
 
-const profileHeaderStyles = {
+const profileHeaderStyles: Styles<{}, {}, any> = {
   root: {
     position: 'relative',
     marginBottom: 5,
