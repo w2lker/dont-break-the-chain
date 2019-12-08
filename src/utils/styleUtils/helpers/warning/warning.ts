@@ -4,7 +4,7 @@ export function bonWarning(message: string, errorType?: string): void {
   }
   if (console !== undefined) {
     const typeOutput = errorType ? ` - ${errorType}` : '';
-    const output = `BON-JSS${errorType}: ${message}`;
+    const output = `BON-JSS${typeOutput}: ${message}`;
     // tslint:disable-next-line:no-console
     console.warn(output);
   }
