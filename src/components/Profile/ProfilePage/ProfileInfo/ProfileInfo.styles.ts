@@ -18,7 +18,7 @@ const profileInfoStyles = {
     lineHeight: '24px',
   },
   email: {
-    ...bon.setFont(14, 'rgba(38, 50, 56, 0.72)', 500, '0.15px'),
+    ...bon.setFont(14, bon.rgba('263238', .72), 500, '0.15px'),
     lineHeight: '20px',
     margin: 0,
   },

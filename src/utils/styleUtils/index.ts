@@ -8,6 +8,7 @@ import {
   borderWidth,
 } from './borders/borders';
 import { clearFix } from './clearfix/clearfix';
+import { rgb, rgba } from './colors/colors';
 import { ellipsis } from './ellipsis/ellipsis';
 import { setFlex } from './flex/flex';
 import { setFont } from './font/font';
@@ -51,6 +52,8 @@ export const bon = {
   position,
   padding,
   positionMirrored,
+  rgb,
+  rgba,
   widthMinMax,
   border: {
     color: borderColor,

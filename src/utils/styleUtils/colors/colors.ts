@@ -1,4 +1,4 @@
-import {bonWarning} from '../helpers/warning/warning';
+import { bonWarning } from '../helpers/warning/warning';
 
 export interface IRgbColor {
   red: number;
@@ -52,4 +52,23 @@ export function hexToRgbMapped(hex?: string): IRgbColor {
   }
 
   return regularHexToRgb(hex);
+}
+
+export function rgb(hex?: string): string {
+  const colors = hexToRgbMapped(hex);
+  return `rgb(${colors.red},${colors.green},${colors.blue})`;
+}
+
+export function rgba(hex?: string, opacity?: number): string {
+  const warnType = 'RGBA';
+  if (opacity === undefined) {
+    return rgb(hex);
+  }
+  if (opacity > 1 || opacity < 0) {
+    bonWarning(`Opacity measures from 0 to 1. You provided opacity ${opacity}, it will be rendered as opacity 1`, warnType);
+    return rgb(hex);
+  }
+
+  const colors = hexToRgbMapped(hex);
+  return `rgba(${colors.red},${colors.green},${colors.blue},${opacity})`;
 }
