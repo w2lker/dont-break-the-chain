@@ -1,4 +1,5 @@
 import { BoundAttributeArray } from '../../models';
+import {bonWarning} from '../warning/warning';
 
 export function boxEdges(composed: string | null): BoundAttributeArray | null {
   if (!composed) {
@@ -21,6 +22,7 @@ export function boxEdges(composed: string | null): BoundAttributeArray | null {
       // @ts-ignore
       return Array(4).fill(split[0]);
     default:
-      throw new Error(`Params error: expected to receive from 1 to 4 entries, but found ${split.length} entries. Please check input data`);
+      bonWarning(`expected to receive from 1 to 4 entries, but found ${split.length} entries. Please check input data`, 'Box Edges Params');
+      return null;
   }
 }
