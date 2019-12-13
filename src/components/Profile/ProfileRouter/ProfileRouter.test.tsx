@@ -37,5 +37,9 @@ it('Match snapshot', () => {
   expect(component.debug()).toMatchSnapshot();
 });
 
-test.todo('Add profile router snapshot');
-test.todo('Check profile page rendering');
+it('Renders Profile page', () => {
+  const { wrappedComponent } = testSetup();
+  const component = mount(wrappedComponent);
+  const page = component.find('ProfilePage');
+  expect(page.length).toBe(1);
+});

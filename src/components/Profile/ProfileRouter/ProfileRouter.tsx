@@ -6,7 +6,7 @@ interface IProfileRouterProps extends RouteComponentProps<any> {
 }
 
 const ProfileRouter: React.FC<IProfileRouterProps> = (props) => {
-  const {} = props;
+  // const {} = props;
   return <ProfilePage />;
 };
 
