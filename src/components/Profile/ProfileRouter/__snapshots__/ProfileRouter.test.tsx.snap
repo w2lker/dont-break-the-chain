@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match snapshot 1`] = `
+"<Provider store={{...}}>
+  <MemoryRouter>
+    <Router history={{...}}>
+      <Route component={[Function: ProfileRouter]}>
+        <ProfileRouter history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
+          <Connect(ProfilePage)>
+            <ProfilePage id={3423} getProfile={[Function: getProfile]}>
+              <WithStyles(undefined)>
+                <Connect(ProfileHeader) classes={{...}}>
+                  <ProfileHeader classes={{...}} logout={[Function: logout]}>
+                    <div className=\\"Connect(ProfileHeader)-root-1\\">
+                      <h3 className=\\"Connect(ProfileHeader)-title-2\\">
+                        Profile
+                      </h3>
+                      <WithStyles(ForwardRef(IconButton)) className=\\"Connect(ProfileHeader)-button-3\\" onClick={[Function: logout]}>
+                        <ForwardRef(IconButton) classes={{...}} className=\\"Connect(ProfileHeader)-button-3\\" onClick={[Function: logout]}>
+                          <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Connect(ProfileHeader)-button-3\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: logout]}>
+                            <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Connect(ProfileHeader)-button-3\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: logout]}>
+                              <button className=\\"MuiButtonBase-root MuiIconButton-root Connect(ProfileHeader)-button-3\\" onBlur={[Function]} onClick={[Function: logout]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} type=\\"button\\" disabled={false}>
+                                <span className=\\"MuiIconButton-label\\">
+                                  <MaterialDesignIcon name=\\"logout\\" className=\\"header-icon\\">
+                                    <span className=\\"material-icon mdi mdi-logout header-icon\\" style={[undefined]} />
+                                  </MaterialDesignIcon>
+                                </span>
+                                <NoSsr>
+                                  <WithStyles(undefined) center={true}>
+                                    <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                      <span className=\\"MuiTouchRipple-root\\">
+                                        <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                      </span>
+                                    </ForwardRef(TouchRipple)>
+                                  </WithStyles(undefined)>
+                                </NoSsr>
+                              </button>
+                            </ForwardRef(ButtonBase)>
+                          </WithStyles(ForwardRef(ButtonBase))>
+                        </ForwardRef(IconButton)>
+                      </WithStyles(ForwardRef(IconButton))>
+                    </div>
+                  </ProfileHeader>
+                </Connect(ProfileHeader)>
+              </WithStyles(undefined)>
+              <WithStyles(undefined)>
+                <Connect(ProfileInfo) classes={{...}}>
+                  <ProfileInfo classes={{...}} avatar=\\"./img.png\\" name=\\"Test User\\" email=\\"tester@gmail.com\\" dispatch={[Function]}>
+                    <div className=\\"Connect(ProfileInfo)-wrapper-16\\">
+                      <div className=\\"Connect(ProfileInfo)-avatar-17\\" style={{...}} />
+                      <h2 className=\\"Connect(ProfileInfo)-name-18\\">
+                        Test User
+                      </h2>
+                      <p className=\\"Connect(ProfileInfo)-email-19\\">
+                        tester@gmail.com
+                      </p>
+                    </div>
+                  </ProfileInfo>
+                </Connect(ProfileInfo)>
+              </WithStyles(undefined)>
+              <WithStyles(undefined)>
+                <Connect(ProfileStats) classes={{...}}>
+                  <ProfileStats classes={{...}} total={245} days={12} dispatch={[Function]}>
+                    <div className=\\"Connect(ProfileStats)-wrapper-20\\">
+                      <div className=\\"Connect(ProfileStats)-statWrapper-21\\">
+                        <h4 className=\\"Connect(ProfileStats)-statValue-22\\">
+                          245
+                        </h4>
+                        <p className=\\"Connect(ProfileStats)-statDescription-24\\">
+                          points received
+                        </p>
+                      </div>
+                      <div className=\\"Connect(ProfileStats)-statWrapper-21\\">
+                        <h4 className=\\"Connect(ProfileStats)-statValue-22\\">
+                          12
+                           
+                          <span className=\\"Connect(ProfileStats)-statSubtitle-23\\">
+                            days
+                          </span>
+                        </h4>
+                        <p className=\\"Connect(ProfileStats)-statDescription-24\\">
+                          longest chain
+                        </p>
+                      </div>
+                    </div>
+                  </ProfileStats>
+                </Connect(ProfileStats)>
+              </WithStyles(undefined)>
+            </ProfilePage>
+          </Connect(ProfilePage)>
+        </ProfileRouter>
+      </Route>
+    </Router>
+  </MemoryRouter>
+</Provider>"
+`;
