@@ -6,8 +6,7 @@ interface IProfileRouterProps extends RouteComponentProps<any> {
 }
 
 const ProfileRouter: React.FC<IProfileRouterProps> = (props) => {
-  // tslint:disable-next-line:no-console
-  console.log('-----', 'profile renders');
+  const {} = props;
   return <ProfilePage />;
 };
 

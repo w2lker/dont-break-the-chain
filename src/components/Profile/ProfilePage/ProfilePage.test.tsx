@@ -12,13 +12,12 @@ import ProfilePageDecorated from './ProfilePage.decorators';
 const middleware = [thunk];
 const mockStore = configureMockStore(middleware);
 
-describe('ProfilePage component', () => {
+const testSetup = () => {
   const sampleProps: IProfilePageProps = {
     id: 123,
     getProfile: jest.fn(),
   };
-
-  const sampleStore = {
+  const sampleStoreData = {
     profile: {
       id: 3423,
       name: 'Test User',
@@ -28,14 +27,14 @@ describe('ProfilePage component', () => {
       longestChain: 12,
     },
   };
+  const store = mockStore(sampleStoreData);
+  return { sampleProps, sampleStoreData, store };
+};
 
-  beforeEach(() => {
-    // @ts-ignore
-    sampleProps.getProfile.mockReset();
-  });
+describe('ProfilePage component', () => {
 
   it('matches snapshot', () => {
-    const store = mockStore(sampleStore);
+    const { store, sampleProps } = testSetup();
     const component = mount(
       <Provider store={store}>
         <ProfilePage {...sampleProps} />
@@ -45,18 +44,19 @@ describe('ProfilePage component', () => {
   });
 
   it('skips render without id', () => {
+    const { sampleProps } = testSetup();
     const props = {
       ...sampleProps,
       id: null,
     };
     // @ts-ignore
     const component = shallow(<ProfilePage {...props} />);
-    expect(component).toEqual({});
+    expect(Object.entries(component).length).toBe(0);
     expect(sampleProps.getProfile).toBeCalledTimes(1);
   });
 
   it('renders with props', () => {
-    const store = mockStore(sampleStore);
+    const { store, sampleProps } = testSetup();
     const component = mount(
       <Provider store={store}>
         <ProfilePage {...sampleProps} />);
@@ -98,12 +98,12 @@ describe('ProfilePage decorators', () => {
       id: 3423,
     };
     jest.spyOn(fakeApi, 'getProfile').mockImplementation(() => {
-      return new Promise((resolve, reject) => (resolve({
+      return new Promise((resolve) => (resolve({
         data: sampleProfile,
       })),
       );
     });
-    const component = mount(
+    mount(
       <Provider store={store}>
         <ProfilePageDecorated/>
       </Provider>,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { mount, render, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import cases from 'jest-in-case';
 import { MemoryRouter } from 'react-router-dom';
 
