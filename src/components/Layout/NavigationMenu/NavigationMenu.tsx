@@ -37,7 +37,7 @@ const NavigationMenu: React.FC<INavigationMenuProps> = (props) => {
     // @ts-ignore
     habits: {
       // @ts-ignore
-      url: routing.habits,
+      url: routing.habits.root,
       label: texts.habits,
       icon: icons.habits,
     },

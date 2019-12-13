@@ -4,6 +4,11 @@ const defaultTexts = {
     habits: 'Habits',
     profile: 'Profile',
   },
+  habits: {
+    header: {
+      title: 'My Habits',
+    },
+  },
   profile: {
     header: {
       title: 'Profile',

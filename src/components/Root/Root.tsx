@@ -4,9 +4,10 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { routing } from '../../contants/routing';
 
 import store from '../../reducers/store';
+import Habits from '../Habits';
 
 import Layout from '../Layout';
-import ProfileRouter from '../Profile';
+import Profile from '../Profile';
 
 const Root: React.FC<{}> = () => {
   return (
@@ -14,8 +15,8 @@ const Root: React.FC<{}> = () => {
       <BrowserRouter>
         <Layout>
           <Switch>
-            <Route path="/test" component = { () => (<h3> This is a test page</h3>) } />
-            <Route path={routing.profile} component={ProfileRouter} />
+            <Route path={routing.habits.root} component={Habits} />
+            <Route path={routing.profile} component={Profile} />
             {/* TODO: switch default redirect to chains later */}
             <Redirect to={routing.profile} />
           </Switch>
