@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitAdd component match snapshot 1`] = `
+"<div className=\\"habitAdd-wrapper\\">
+  <WithStyles(ForwardRef(Fab)) classes={{...}} color=\\"primary\\" component={{...}} to=\\"/habit/create\\">
+    <MaterialDesignIcon name=\\"plus\\" />
+  </WithStyles(ForwardRef(Fab))>
+</div>"
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitsHeader component match snapshot 1`] = `
+"<div className=\\"habitsHeader-root\\">
+  <h4 className=\\"habitsHeader-title\\">
+    My Habits
+  </h4>
+</div>"
+`;

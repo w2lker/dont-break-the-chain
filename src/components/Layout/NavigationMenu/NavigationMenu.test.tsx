@@ -12,28 +12,31 @@ import { routing } from '../../../contants/routing';
 import { defaultIcons } from '../../../contants/ui';
 import navigationMenuStyles from './NavigationMenu.styles';
 
-const classes = {
-  root: 'navigation-menu-root',
-};
-
-const classesKeys = Object.keys(classes);
-
-describe('NavigationMenu', () => {
+const testSetup = () => {
+  const classes = {
+    root: 'navigation-menu-root',
+  };
+  const classesKeys = Object.keys(classes);
   const props = {
     classes,
   };
-
   const wrappedComponent = mount(
     <MemoryRouter>
       <NavigationMenu {...props} />
     </MemoryRouter>,
   );
+  return { classes, classesKeys, wrappedComponent };
+};
+
+describe('NavigationMenu', () => {
 
   it('match snapshot', () => {
+    const { wrappedComponent } = testSetup();
     expect(wrappedComponent.debug()).toMatchSnapshot();
   });
 
   it('renders 3 menu items', () => {
+    const { wrappedComponent } = testSetup();
     const menuItems = wrappedComponent.find('NavigationMenuItem');
     expect(menuItems.length).toBe(3);
   });
@@ -44,11 +47,12 @@ describe('NavigationMenu', () => {
   const casesTitle = 'Testing rendering props of MenuItems';
 
   const casesTester = (opts: typeof casesData[0]) => {
+    const { wrappedComponent } = testSetup();
     const item = wrappedComponent.find('NavigationMenuItem').at(opts.id);
     expect(item).toBeDefined();
     expect(item.props()).toMatchObject({
       // @ts-ignore
-      url: routing[opts.def],
+      url: opts.url || routing[opts.def],
       // @ts-ignore
       label: texts[opts.def],
       // @ts-ignore
@@ -58,7 +62,7 @@ describe('NavigationMenu', () => {
 
   const casesData = [
     { name: 'Chains is rendered', id: 0, def: 'chains' },
-    { name: 'Habits is rendered', id: 1, def: 'habits' },
+    { name: 'Habits is rendered', id: 1, def: 'habits', url: routing.habits.root },
     { name: 'Profile is rendered', id: 2, def: 'profile' },
   ];
 

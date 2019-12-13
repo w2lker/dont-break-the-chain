@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitCreateIcon component match snapshot 1`] = `
+"<div className=\\"habitCreateIcon-wrapper\\">
+  HabitCreateIcon Component
+</div>"
+`;
