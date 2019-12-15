@@ -1,6 +1,6 @@
 import { List } from 'immutable';
-import { ActionsProfile, PROFILE_GET_ACTIVE, PROFILE_GET_ERROR, PROFILE_GET_SUCCESS } from '../actions/profile';
-import { requestStatuses } from '../contants/general';
+
+import { ActionsProfile, ProfileGetStatuses } from '../actions/profile';
 import { IProfileReducer } from '../models/profile';
 
 const initialState: IProfileReducer = {
@@ -11,34 +11,34 @@ const initialState: IProfileReducer = {
   points: 0,
   longestChain: 0,
   historicalView: List(),
-  profileRequest: null,
+  profileRequest: undefined,
   errorMessage: null,
 };
 
 function profileReducer(state: IProfileReducer = initialState, action: ActionsProfile) {
 
   switch (action.type) {
-    case PROFILE_GET_ACTIVE: {
+    case ProfileGetStatuses.active: {
       return {
         ...state,
-        profileRequest: requestStatuses.active,
+        profileRequest: ProfileGetStatuses.active,
         errorMessage: null,
       };
     }
 
-    case PROFILE_GET_ERROR: {
+    case ProfileGetStatuses.error: {
       return {
         ...state,
-        profileRequest: requestStatuses.error,
+        profileRequest: ProfileGetStatuses.error,
         errorMessage: action.payload,
       };
     }
 
-    case PROFILE_GET_SUCCESS: {
+    case ProfileGetStatuses.success: {
       return {
         ...state,
         ...action.payload,
-        profileRequest: null,
+        profileRequest: undefined,
         errorMessage: null,
       };
     }

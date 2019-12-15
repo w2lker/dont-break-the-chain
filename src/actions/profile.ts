@@ -2,41 +2,46 @@ import fakeApi from '../api/fakeApi';
 import { IProfile } from '../models/profile';
 
 // export const PROFILE_GET = 'PROFILE/GET';
+export enum ProfileGetStatuses {
+  active = 'PROFILE/GET/ACTIVE',
+  error = 'PROFILE/GET/ERROR',
+  success = 'PROFILE/GET/SUCCESS',
+}
+
 export const PROFILE_GET_ACTIVE = 'PROFILE/GET/ACTIVE';
 export const PROFILE_GET_ERROR = 'PROFILE/GET/ERROR';
 export const PROFILE_GET_SUCCESS = 'PROFILE/GET/SUCCESS';
 
 interface IGetProfileActive {
-  type: typeof PROFILE_GET_ACTIVE;
+  type: typeof ProfileGetStatuses.active;
 }
 
 interface IGetProfileError {
-  type: typeof PROFILE_GET_ERROR;
-  // TODO: define error payload
+  type: typeof ProfileGetStatuses.error;
   payload: any;
 }
 
 interface IGetProfileSuccess {
-  type: typeof PROFILE_GET_SUCCESS;
+  type: typeof ProfileGetStatuses.success;
   payload: IProfile;
 }
 
 export function getProfileStarted() {
   return {
-    type: PROFILE_GET_ACTIVE,
+    type: ProfileGetStatuses.active,
   };
 }
 
 export function getProfileSuccess(profile: IProfile) {
   return {
-    type: PROFILE_GET_SUCCESS,
+    type: ProfileGetStatuses.success,
     payload: profile,
   };
 }
 
 export function getProfileError(errorData: any) {
   return {
-    type: PROFILE_GET_ERROR,
+    type: ProfileGetStatuses.error,
     payload: errorData,
   };
 }

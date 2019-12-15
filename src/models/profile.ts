@@ -1,5 +1,5 @@
 import { List } from 'immutable';
-import { RequestStatuses } from './general';
+import { ProfileGetStatuses } from '../actions/profile';
 
 export interface IDailyProgress {
   date: string;
@@ -17,6 +17,6 @@ export interface IProfile {
 }
 
 export interface IProfileReducer extends IProfile {
-  profileRequest: RequestStatuses;
+  profileRequest?: typeof ProfileGetStatuses;
   errorMessage: string | null;
 }
