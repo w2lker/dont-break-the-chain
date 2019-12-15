@@ -27,3 +27,6 @@ export interface IHabit {
   longestChain?: number;
   dates?: List<IHabitDate>;
 }
+
+// TODO: define error data model
+export type IHabitsError = any;

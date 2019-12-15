@@ -1,3 +1,3 @@
-import ProfileRouter from './ProfileRouter/ProfileRouter';
+import Profile from './ProfileRouter/ProfileRouter';
 
-export default ProfileRouter;
+export default Profile;

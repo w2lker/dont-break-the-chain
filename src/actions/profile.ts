@@ -8,10 +8,6 @@ export enum ProfileGetStatuses {
   success = 'PROFILE/GET/SUCCESS',
 }
 
-export const PROFILE_GET_ACTIVE = 'PROFILE/GET/ACTIVE';
-export const PROFILE_GET_ERROR = 'PROFILE/GET/ERROR';
-export const PROFILE_GET_SUCCESS = 'PROFILE/GET/SUCCESS';
-
 interface IGetProfileActive {
   type: typeof ProfileGetStatuses.active;
 }

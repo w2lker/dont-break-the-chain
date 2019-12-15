@@ -6,15 +6,12 @@ import {
   getProfile,
   getProfileError,
   getProfileStarted,
-  getProfileSuccess,
-  PROFILE_GET_ACTIVE,
-  PROFILE_GET_ERROR,
-  PROFILE_GET_SUCCESS,
+  getProfileSuccess, ProfileGetStatuses,
 } from '../profile';
 
 it('getProfileStarted works', () => {
   expect(getProfileStarted()).toEqual({
-    type: PROFILE_GET_ACTIVE,
+    type: ProfileGetStatuses.active,
   });
 });
 
@@ -24,7 +21,7 @@ it('getProfileError works', () => {
     message: 'Forbidden',
   };
   expect(getProfileError(sampleError)).toEqual({
-    type: PROFILE_GET_ERROR,
+    type: ProfileGetStatuses.error,
     payload: sampleError,
   });
 });
@@ -35,7 +32,7 @@ it('getProfileSuccess works', () => {
   };
     // @ts-ignore
   expect(getProfileSuccess(sampleProfile)).toEqual({
-    type: PROFILE_GET_SUCCESS,
+    type: ProfileGetStatuses.success,
     payload: sampleProfile,
   });
 });
@@ -60,7 +57,7 @@ describe('getProfile function', () => {
   it('creates dispatches and transferring data received from API module', () => {
 
     jest.spyOn(fakeApi, 'getProfile').mockImplementation(() => {
-      return new Promise((resolve, reject) => (resolve({
+      return new Promise((resolve) => (resolve({
         data: sampleProfile,
       })),
       );
