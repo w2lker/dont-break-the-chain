@@ -5,6 +5,7 @@ import { IHabitsReducer } from '../models/habit';
 
 const initialState: IHabitsReducer = {
   habits: List(),
+  habitsRequest: undefined,
   errorMessage: '',
 };
 
@@ -15,6 +16,7 @@ function habitReducer(state = initialState, action: ActionsHabits) {
       return {
         ...state,
         habitsRequest: HabitsGetStatuses.active,
+        errorMessage: null,
       };
     }
 
@@ -30,7 +32,7 @@ function habitReducer(state = initialState, action: ActionsHabits) {
       return {
         ...state,
         habitsRequest: HabitsGetStatuses.success,
-        errorMessage: undefined,
+        errorMessage: null,
         habits: action.payload,
       };
     }

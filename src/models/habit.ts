@@ -1,5 +1,5 @@
 import { List } from 'immutable';
-import {HabitsGetStatuses} from '../actions/habits';
+import { HabitsGetStatuses } from '../actions/habits';
 import { colorsKeys } from '../contants/colors';
 
 export const habitStatus = {
@@ -34,6 +34,6 @@ export type IHabitsError = any;
 
 export interface IHabitsReducer {
   habits: List<IHabit>;
-  habitsRequest?: typeof HabitsGetStatuses;
+  habitsRequest?: HabitsGetStatuses;
   errorMessage: IHabitsError;
 }

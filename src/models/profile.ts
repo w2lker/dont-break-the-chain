@@ -20,6 +20,6 @@ export interface IProfile {
 export type IProfileError = any;
 
 export interface IProfileReducer extends IProfile {
-  profileRequest?: typeof ProfileGetStatuses;
+  profileRequest?: ProfileGetStatuses;
   errorMessage: IProfileError;
 }
