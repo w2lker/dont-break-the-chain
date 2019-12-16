@@ -2,14 +2,14 @@ import { List } from 'immutable';
 import { HabitsGetStatuses } from '../actions/habits';
 import { colorsKeys } from '../contants/colors';
 
-export const habitStatus = {
-  incomplete: 'habitStatus/incomplete',
-  complete: 'habitStatus/completed',
-  paused: 'habitStatus/paused',
-  start: 'habitStatus/started',
-  end: 'habitStatus/ended',
-  incompleteToday: 'habitStatus/incompleteToday',
-};
+export enum habitStatus {
+  incomplete= 'habitStatus/incomplete',
+  complete = 'habitStatus/completed',
+  paused = 'habitStatus/paused',
+  start = 'habitStatus/started',
+  end = 'habitStatus/ended',
+  incompleteToday = 'habitStatus/incompleteToday',
+}
 
 export type habitStatusesType =  'habitStatus/incomplete' | 'habitStatus/completed' | 'habitStatus/paused' | 'habitStatus/started' | 'habitStatus/ended' | 'habitStatus/incompleteToday';
 

@@ -1,5 +1,7 @@
-
 import { List } from 'immutable';
+import { ThunkDispatch } from 'redux-thunk';
+
+import fakeApi from '../api/fakeApi';
 import { IHabit, IHabitsError } from '../models/habit';
 
 export enum HabitsGetStatuses {
@@ -19,13 +21,12 @@ interface IGetHabitsError {
 
 interface IGetHabitsSuccess {
   type: typeof HabitsGetStatuses.success;
-  // TODO: define data model for response
   payload: List<IHabit>;
 }
 
 export function getHabitsStarted() {
   return {
-    payload: HabitsGetStatuses.active,
+    type: HabitsGetStatuses.active,
   };
 }
 
@@ -40,6 +41,18 @@ export function getHabitsSuccess(habits: any) {
   return {
     type: HabitsGetStatuses.success,
     payload: habits,
+  };
+}
+
+export function getHabits() {
+  return (dispatch: ThunkDispatch<any, any, any>) => {
+    dispatch(getHabitsStarted());
+    return fakeApi.getHabits().then((response) => {
+      // @ts-ignore
+      dispatch(getHabitsSuccess(response.data));
+    }).catch((response) => {
+      dispatch(getHabitsError(response.error));
+    });
   };
 }
 

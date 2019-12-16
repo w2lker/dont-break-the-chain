@@ -1,3 +1,4 @@
+import habits from './fakeData/habits';
 import profile from './fakeData/profile';
 
 const fakeFetch = (data: any) => {
@@ -20,6 +21,11 @@ class Api {
   getProfile() {
     return fakeFetch(profile);
   }
+
+  getHabits() {
+    return fakeFetch(habits);
+  }
+
   logout() {
     return fakeFetch({ status: 200 });
   }
