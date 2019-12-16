@@ -16,7 +16,10 @@ export interface IProfile {
   historicalView: List<IDailyProgress>;
 }
 
+// TODO: define error data model
+export type IProfileError = any;
+
 export interface IProfileReducer extends IProfile {
   profileRequest?: typeof ProfileGetStatuses;
-  errorMessage: string | null;
+  errorMessage: IProfileError;
 }
