@@ -97,7 +97,7 @@ describe('ProfilePage decorators', () => {
     const sampleProfile = {
       id: 3423,
     };
-    jest.spyOn(fakeApi, 'getProfile').mockImplementation(() => {
+    const spy = jest.spyOn(fakeApi, 'getProfile').mockImplementation(() => {
       return new Promise((resolve) => (resolve({
         data: sampleProfile,
       })),
@@ -109,5 +109,6 @@ describe('ProfilePage decorators', () => {
       </Provider>,
     );
     expect(fakeApi.getProfile).toBeCalledTimes(1);
+    spy.mockRestore();
   });
 });
