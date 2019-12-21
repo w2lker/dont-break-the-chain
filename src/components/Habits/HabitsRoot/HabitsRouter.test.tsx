@@ -8,13 +8,18 @@ import thunk from 'redux-thunk';
 
 import HabitsRouter from './HabitsRouter';
 
+import habits from '../../../api/fakeData/habits';
 import { routing } from '../../../contants/routing';
 
 const testSetup = () => {
   const middleware = [thunk];
   const mockStore = configureMockStore(middleware);
   // TODO: add sample data for habits page
-  const sampleStoreData = {};
+  const sampleStoreData = {
+    habits: {
+      habits,
+    },
+  };
   const store = mockStore(sampleStoreData);
   const wrappedComponent = (url: string) => (
     <Provider store={store}>

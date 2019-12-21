@@ -7,21 +7,23 @@ exports[`Match snapshot 1`] = `
       <Route component={[Function: HabitsRouter]}>
         <HabitsRouter history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
           <Route component={{...}}>
-            <WithStyles(HabitsPage) history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
-              <HabitsPage classes={{...}} history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
-                <div className=\\"HabitsPage-root-1\\">
-                  <WithStyles(HabitsHeader)>
-                    <HabitsHeader classes={{...}}>
-                      <div className=\\"HabitsHeader-root-2\\">
-                        <h4 className=\\"HabitsHeader-title-3\\">
-                          My Habits
-                        </h4>
-                      </div>
-                    </HabitsHeader>
-                  </WithStyles(HabitsHeader)>
-                </div>
-              </HabitsPage>
-            </WithStyles(HabitsPage)>
+            <WithStyles(undefined) history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
+              <Connect(HabitsPage) classes={{...}} history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
+                <HabitsPage classes={{...}} history={{...}} location={{...}} match={{...}} staticContext={[undefined]} habits={{...}} getHabits={[Function: getHabits]}>
+                  <div className=\\"Connect(HabitsPage)-root-1\\">
+                    <WithStyles(HabitsHeader)>
+                      <HabitsHeader classes={{...}}>
+                        <div className=\\"HabitsHeader-root-2\\">
+                          <h4 className=\\"HabitsHeader-title-3\\">
+                            My Habits
+                          </h4>
+                        </div>
+                      </HabitsHeader>
+                    </WithStyles(HabitsHeader)>
+                  </div>
+                </HabitsPage>
+              </Connect(HabitsPage)>
+            </WithStyles(undefined)>
           </Route>
           <Route path=\\"/habit/create\\" component={{...}} />
           <Route path=\\"/habit/update/id\\" component={{...}} />
@@ -39,21 +41,23 @@ exports[`Match snapshot 2`] = `
       <Route component={[Function: HabitsRouter]}>
         <HabitsRouter history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
           <Route component={{...}}>
-            <WithStyles(HabitsPage) history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
-              <HabitsPage classes={{...}} history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
-                <div className=\\"HabitsPage-root-1\\">
-                  <WithStyles(HabitsHeader)>
-                    <HabitsHeader classes={{...}}>
-                      <div className=\\"HabitsHeader-root-2\\">
-                        <h4 className=\\"HabitsHeader-title-3\\">
-                          My Habits
-                        </h4>
-                      </div>
-                    </HabitsHeader>
-                  </WithStyles(HabitsHeader)>
-                </div>
-              </HabitsPage>
-            </WithStyles(HabitsPage)>
+            <WithStyles(undefined) history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
+              <Connect(HabitsPage) classes={{...}} history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
+                <HabitsPage classes={{...}} history={{...}} location={{...}} match={{...}} staticContext={[undefined]} habits={{...}} getHabits={[Function: getHabits]}>
+                  <div className=\\"Connect(HabitsPage)-root-1\\">
+                    <WithStyles(HabitsHeader)>
+                      <HabitsHeader classes={{...}}>
+                        <div className=\\"HabitsHeader-root-2\\">
+                          <h4 className=\\"HabitsHeader-title-3\\">
+                            My Habits
+                          </h4>
+                        </div>
+                      </HabitsHeader>
+                    </WithStyles(HabitsHeader)>
+                  </div>
+                </HabitsPage>
+              </Connect(HabitsPage)>
+            </WithStyles(undefined)>
           </Route>
           <Route path=\\"/habit/create\\" component={{...}}>
             <WithStyles(HabitCreate) history={{...}} location={{...}} match={{...}} staticContext={[undefined]}>
