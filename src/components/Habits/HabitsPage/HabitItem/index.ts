@@ -1,3 +1,3 @@
-import HabitItem from './HabitItem.decorators';
+import HabitItem from './HabitItem';
 
 export default HabitItem;

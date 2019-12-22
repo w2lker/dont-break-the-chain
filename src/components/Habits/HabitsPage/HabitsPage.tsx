@@ -16,10 +16,10 @@ export interface IHabitsPageProps extends WithStyles<typeof habitsPageStyles> {
 const HabitsPage: React.FC<IHabitsPageProps> = (props) => {
   const { classes, habits, getHabits } = props as Required<IHabitsPageProps>;
   useEffect(() => {
-    if (!(habits && habits.size)) {
+    if (!(habits && habits.size) && getHabits) {
       getHabits();
     }
-  }, [habits]);
+  }, [habits, getHabits]);
   return (
     <div className={classes.root}>
       <HabitsHeader />

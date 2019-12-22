@@ -8,6 +8,13 @@ const defaultTexts = {
     header: {
       title: 'My Habits',
     },
+    item: {
+      today: (isCompleted: boolean) => {
+        const status = isCompleted ? 'complete' : 'incomplete';
+        return `Today - ${status}`;
+      },
+      chain: (length: number) => `Chain - ${length} days`,
+    },
   },
   profile: {
     header: {
