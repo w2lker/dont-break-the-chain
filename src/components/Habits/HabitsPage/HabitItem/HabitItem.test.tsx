@@ -4,7 +4,6 @@ import { mount, shallow } from 'enzyme';
 // import cases from 'jest-in-case';
 
 import HabitItem, { IHabitItemProps } from './HabitItem';
-import HabitItemDecorated from './HabitItem.decorators';
 import habitItemStyles from './HabitItem.styles';
 
 const testSetup = () => {
@@ -43,20 +42,6 @@ describe('HabitItem styles', () => {
     classesKeys.forEach((keyValue) => {
       // @ts-ignore
       expect(habitItemStyles[keyValue]).toBeDefined();
-    });
-  });
-  test.todo('sample placeholder');
-});
-
-describe('HabitItem decorators', () => {
-
-  it('provides styled classes from decorators', () => {
-    const { sampleProps, classesKeys } = testSetup();
-    const component = mount(<HabitItemDecorated {...sampleProps} />);
-    // @ts-ignore
-    const assignedClasses = component.find('HabitItem').props().classes;
-    classesKeys.forEach(keyValue => {
-      expect(assignedClasses[keyValue]).toBeDefined();
     });
   });
   test.todo('sample placeholder');

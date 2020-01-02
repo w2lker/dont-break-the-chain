@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitItemMenuContent component match snapshot 1`] = `
+"<MemoryRouter>
+  <Router history={{...}}>
+    <HabitItemMenuContent classes={{...}} icon=\\"sample-icon\\" title=\\"sample-text\\" action={[Function: mockConstructor]}>
+      <WithStyles(ForwardRef(MenuItem)) onClick={[Function: mockConstructor]}>
+        <ForwardRef(MenuItem) classes={{...}} onClick={[Function: mockConstructor]}>
+                  <li className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[Function: mockConstructor]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false}>
+                    <div className=\\"habitItemMenuContent-wrapper\\">
+                      <MaterialDesignIcon className=\\"habitItemMenuContent-icon\\" name=\\"sample-icon\\">
+                        <span className=\\"material-icon mdi mdi-sample-icon habitItemMenuContent-icon\\" style={[undefined]} />
+                      </MaterialDesignIcon>
+                      <span className=\\"habitItemMenuContent-text\\">
+                        sample-text
+                      </span>
+                    </div>
+                    <NoSsr>
+                      <WithStyles(undefined) center={false}>
+                        <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                          <span className=\\"MuiTouchRipple-root\\">
+                            <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                          </span>
+                        </ForwardRef(TouchRipple)>
+                      </WithStyles(undefined)>
+                    </NoSsr>
+                  </li>
+                </ForwardRef(ButtonBase)>
+              </WithStyles(ForwardRef(ButtonBase))>
+            </ForwardRef(ListItem)>
+          </WithStyles(ForwardRef(ListItem))>
+        </ForwardRef(MenuItem)>
+      </WithStyles(ForwardRef(MenuItem))>
+    </HabitItemMenuContent>
+  </Router>
+</MemoryRouter>"
+`;
+
+exports[`HabitItemMenuContent component match snapshot 2`] = `
+"<MemoryRouter>
+  <Router history={{...}}>
+    <HabitItemMenuContent classes={{...}} icon=\\"sample-icon\\" title=\\"sample-text\\" action={[undefined]} url=\\"some-link\\">
+      <WithStyles(ForwardRef(MenuItem)) component={{...}} to=\\"some-link\\">
+        <ForwardRef(MenuItem) classes={{...}} component={{...}} to=\\"some-link\\">
+          <WithStyles(ForwardRef(ListItem)) button={true} role=\\"menuitem\\" tabIndex={-1} component={{...}} selected={[undefined]} disableGutters={false} classes={{...}} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" to=\\"some-link\\">
+            <ForwardRef(ListItem) classes={{...}} button={true} role=\\"menuitem\\" tabIndex={-1} component={{...}} selected={[undefined]} disableGutters={false} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" to=\\"some-link\\">
+              <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} to=\\"some-link\\" component={{...}} focusVisibleClassName=\\"Mui-focusVisible\\">
+                <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} to=\\"some-link\\" component={{...}} focusVisibleClassName=\\"Mui-focusVisible\\">
+                  <Link className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[undefined]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false} to=\\"some-link\\">
+                    <LinkAnchor className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[undefined]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false} href=\\"/some-link\\" navigate={[Function: navigate]}>
+                      <a className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false} href=\\"/some-link\\" onClick={[Function: onClick]}>
+                        <div className=\\"habitItemMenuContent-wrapper\\">
+                          <MaterialDesignIcon className=\\"habitItemMenuContent-icon\\" name=\\"sample-icon\\">
+                            <span className=\\"material-icon mdi mdi-sample-icon habitItemMenuContent-icon\\" style={[undefined]} />
+                          </MaterialDesignIcon>
+                          <span className=\\"habitItemMenuContent-text\\">
+                            sample-text
+                          </span>
+                        </div>
+                        <NoSsr>
+                          <WithStyles(undefined) center={false}>
+                            <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                              <span className=\\"MuiTouchRipple-root\\">
+                                <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                              </span>
+                            </ForwardRef(TouchRipple)>
+                          </WithStyles(undefined)>
+                        </NoSsr>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </ForwardRef(ButtonBase)>
+              </WithStyles(ForwardRef(ButtonBase))>
+            </ForwardRef(ListItem)>
+          </WithStyles(ForwardRef(ListItem))>
+        </ForwardRef(MenuItem)>
+      </WithStyles(ForwardRef(MenuItem))>
+    </HabitItemMenuContent>
+  </Router>
+</MemoryRouter>"
+`;
