@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitItemMenu component match snapshot 1`] = `
+"<div className=\\"habitItemMenu-wrapper\\">
+  <WithStyles(ForwardRef(IconButton)) onClick={[Function: onClick]}>
+    <MaterialDesignIcon name=\\"dots-vertical\\" />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(Menu)) id=\\"habit-menu-1\\" anchorEl={{...}} keepMounted={true} open={false} onClose={[Function: onClose]}>
+    <WithStyles(HabitItemMenuContent) icon=\\"check\\" title=\\"Complete today\\" action={[Function: mockConstructor]} />
+    <WithStyles(HabitItemMenuContent) icon=\\"pencil\\" title=\\"Edit\\" url=\\"/habitid1\\" />
+    <WithStyles(HabitItemMenuContent) icon=\\"pause\\" title=\\"Pause\\" action={[Function: mockConstructor]} />
+    <WithStyles(HabitItemMenuContent) icon=\\"delete\\" title=\\"Delete\\" action={[Function: mockConstructor]} />
+  </WithStyles(ForwardRef(Menu))>
+</div>"
+`;

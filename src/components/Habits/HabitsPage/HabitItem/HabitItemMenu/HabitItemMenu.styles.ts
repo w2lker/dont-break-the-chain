@@ -1,6 +1,6 @@
 const habitItemMenuStyles = {
   wrapper: {
-    padding: 0,
+    marginLeft: 'auto',
   },
 };
 
