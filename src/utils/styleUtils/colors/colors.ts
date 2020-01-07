@@ -24,6 +24,9 @@ export function hexToRgbMapped(hex?: string): IRgbColor {
   if (!hex) {
     return black;
   }
+  if (hex.charAt(0) === '#') {
+    return regularHexToRgb(hex.slice(1));
+  }
   if (hex.length === 1) {
     return regularHexToRgb(hex.repeat(6));
   }
