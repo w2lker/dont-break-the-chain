@@ -1,7 +1,245 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HabitItem component match snapshot 1`] = `
-"<div className=\\"habitItem-wrapper\\">
-  HabitItem Component
-</div>"
+"<MemoryRouter>
+  <Router history={{...}}>
+    <Provider store={{...}}>
+      <HabitItem content={{...}} isLast={false}>
+        <div className=\\"wrapper-0-2-1\\">
+          <div className=\\"icon-0-2-3 icon-0-0-2-8\\">
+            <MaterialDesignIcon name=\\"sample-icon\\">
+              <span className=\\"material-icon mdi mdi-sample-icon\\" style={[undefined]} />
+            </MaterialDesignIcon>
+          </div>
+          <div className=\\"description-0-2-5\\">
+            <h4 className=\\"title-0-2-6\\">
+              Sample habit
+            </h4>
+            <span className=\\"subtitle-0-2-7\\">
+              Today - incomplete
+            </span>
+            <span className=\\"subtitle-0-2-7\\">
+              Chain - 1 days
+            </span>
+            <WithStyles(undefined) content={{...}}>
+              <Connect(HabitItemMenu) classes={{...}} content={{...}}>
+                <HabitItemMenu classes={{...}} content={{...}} onCheck={[Function: onCheck]} onUncheck={[Function: onUncheck]} onPause={[Function: onPause]} onDelete={[Function: onDelete]}>
+                  <div className=\\"Connect(HabitItemMenu)-wrapper-1\\">
+                    <WithStyles(ForwardRef(IconButton)) onClick={[Function: onClick]}>
+                      <ForwardRef(IconButton) classes={{...}} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onClick]}>
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: onClick]}>
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root\\" onBlur={[Function]} onClick={[Function: onClick]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={0} type=\\"button\\" disabled={false}>
+                              <span className=\\"MuiIconButton-label\\">
+                                <MaterialDesignIcon name=\\"dots-vertical\\">
+                                  <span className=\\"material-icon mdi mdi-dots-vertical\\" style={[undefined]} />
+                                </MaterialDesignIcon>
+                              </span>
+                              <NoSsr>
+                                <WithStyles(undefined) center={true}>
+                                  <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                    <span className=\\"MuiTouchRipple-root\\">
+                                      <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                    </span>
+                                  </ForwardRef(TouchRipple)>
+                                </WithStyles(undefined)>
+                              </NoSsr>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                    <WithStyles(ForwardRef(Menu)) id=\\"habit-menu-1\\" anchorEl={{...}} keepMounted={true} open={false} onClose={[Function: onClose]}>
+                      <ForwardRef(Menu) classes={{...}} id=\\"habit-menu-1\\" anchorEl={{...}} keepMounted={true} open={false} onClose={[Function: onClose]}>
+                        <WithStyles(ForwardRef(Popover)) getContentAnchorEl={[Function: getContentAnchorEl]} classes={[undefined]} onClose={[Function: onClose]} onEntering={[Function: handleEntering]} anchorOrigin={{...}} transformOrigin={{...}} PaperProps={{...}} open={false} transitionDuration=\\"auto\\" id=\\"habit-menu-1\\" anchorEl={{...}} keepMounted={true}>
+                          <ForwardRef(Popover) classes={{...}} getContentAnchorEl={[Function: getContentAnchorEl]} onClose={[Function: onClose]} onEntering={[Function: handleEntering]} anchorOrigin={{...}} transformOrigin={{...}} PaperProps={{...}} open={false} transitionDuration=\\"auto\\" id=\\"habit-menu-1\\" anchorEl={{...}} keepMounted={true}>
+                            <ForwardRef(Modal) container={[undefined]} open={false} BackdropProps={{...}} className=\\"MuiPopover-root\\" onClose={[Function: onClose]} id=\\"habit-menu-1\\" keepMounted={true}>
+                              <ForwardRef(Portal) container={[undefined]} disablePortal={false}>
+                                <Portal containerInfo={{...}}>
+                                  <div onKeyDown={[Function: handleKeyDown]} role=\\"presentation\\" className=\\"MuiPopover-root\\" id=\\"habit-menu-1\\" style={{...}}>
+                                    <ForwardRef(SimpleBackdrop) open={false} onClick={[Function: handleBackdropClick]} invisible={true} />
+                                    <TrapFocus disableEnforceFocus={false} disableAutoFocus={false} disableRestoreFocus={false} getDoc={[Function: getDoc]} isEnabled={[Function]} open={false}>
+                                      <div tabIndex={0} data-test=\\"sentinelStart\\" />
+                                      <ForwardRef(Grow) appear={true} in={false} onEnter={[Function: chainedFunction]} onEntered={[undefined]} onExit={[undefined]} onExited={[Function: chainedFunction]} onExiting={[undefined]} timeout=\\"auto\\" onEntering={[Function: chainedFunction]} tabIndex=\\"-1\\">
+                                        <Transition appear={true} in={false} onEnter={[Function: handleEnter]} onExit={[Function: handleExit]} addEndListener={[Function: addEndListener]} timeout={{...}} onEntered={[Function: noop]} onExited={[Function: chainedFunction]} onExiting={[Function: noop]} onEntering={[Function: chainedFunction]} tabIndex=\\"-1\\" mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                          <WithStyles(ForwardRef(Paper)) elevation={8} classes={{...}} className=\\"MuiPopover-paper\\" style={{...}} tabIndex=\\"-1\\">
+                                            <ForwardRef(Paper) classes={{...}} elevation={8} className=\\"MuiPopover-paper\\" style={{...}} tabIndex=\\"-1\\">
+                                              <div className=\\"MuiPaper-root MuiMenu-paper MuiPaper-elevation8 MuiPopover-paper MuiPaper-rounded\\" style={{...}} tabIndex=\\"-1\\">
+                                                <ForwardRef(MenuList) onKeyDown={[Function: handleListKeyDown]} actions={{...}} autoFocus={false} autoFocusItem={false} variant=\\"selectedMenu\\" className=\\"MuiMenu-list\\">
+                                                  <WithStyles(ForwardRef(List)) role=\\"menu\\" className=\\"MuiMenu-list\\" onKeyDown={[Function: handleKeyDown]} tabIndex={-1}>
+                                                    <ForwardRef(List) classes={{...}} role=\\"menu\\" className=\\"MuiMenu-list\\" onKeyDown={[Function: handleKeyDown]} tabIndex={-1}>
+                                                      <ul className=\\"MuiList-root MuiMenu-list MuiList-padding\\" role=\\"menu\\" onKeyDown={[Function: handleKeyDown]} tabIndex={-1}>
+                                                        <WithStyles(HabitItemMenuContent) icon=\\"check\\" title=\\"Complete today\\" action={[Function: onCheck]} tabIndex={0}>
+                                                          <HabitItemMenuContent classes={{...}} icon=\\"check\\" title=\\"Complete today\\" action={[Function: onCheck]} tabIndex={0}>
+                                                            <WithStyles(ForwardRef(MenuItem)) onClick={[Function: onCheck]}>
+                                                              <ForwardRef(MenuItem) classes={{...}} onClick={[Function: onCheck]}>
+                                                                <WithStyles(ForwardRef(ListItem)) button={true} role=\\"menuitem\\" tabIndex={-1} component=\\"li\\" selected={[undefined]} disableGutters={false} classes={{...}} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" onClick={[Function: onCheck]}>
+                                                                  <ForwardRef(ListItem) classes={{...}} button={true} role=\\"menuitem\\" tabIndex={-1} component=\\"li\\" selected={[undefined]} disableGutters={false} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" onClick={[Function: onCheck]}>
+                                                                    <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} onClick={[Function: onCheck]} component=\\"li\\" focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                      <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} onClick={[Function: onCheck]} component=\\"li\\" focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                        <li className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[Function: onCheck]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false}>
+                                                                          <div className=\\"HabitItemMenuContent-root-59\\">
+                                                                            <MaterialDesignIcon className=\\"HabitItemMenuContent-icon-60\\" name=\\"check\\">
+                                                                              <span className=\\"material-icon mdi mdi-check HabitItemMenuContent-icon-60\\" style={[undefined]} />
+                                                                            </MaterialDesignIcon>
+                                                                            <span className=\\"HabitItemMenuContent-text-61\\">
+                                                                              Complete today
+                                                                            </span>
+                                                                          </div>
+                                                                          <NoSsr>
+                                                                            <WithStyles(undefined) center={false}>
+                                                                              <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                                                                                <span className=\\"MuiTouchRipple-root\\">
+                                                                                  <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                                                                </span>
+                                                                              </ForwardRef(TouchRipple)>
+                                                                            </WithStyles(undefined)>
+                                                                          </NoSsr>
+                                                                        </li>
+                                                                      </ForwardRef(ButtonBase)>
+                                                                    </WithStyles(ForwardRef(ButtonBase))>
+                                                                  </ForwardRef(ListItem)>
+                                                                </WithStyles(ForwardRef(ListItem))>
+                                                              </ForwardRef(MenuItem)>
+                                                            </WithStyles(ForwardRef(MenuItem))>
+                                                          </HabitItemMenuContent>
+                                                        </WithStyles(HabitItemMenuContent)>
+                                                        <WithStyles(HabitItemMenuContent) icon=\\"pencil\\" title=\\"Edit\\" url=\\"/habitid1\\">
+                                                          <HabitItemMenuContent classes={{...}} icon=\\"pencil\\" title=\\"Edit\\" url=\\"/habitid1\\">
+                                                            <WithStyles(ForwardRef(MenuItem)) component={{...}} to=\\"/habitid1\\">
+                                                              <ForwardRef(MenuItem) classes={{...}} component={{...}} to=\\"/habitid1\\">
+                                                                <WithStyles(ForwardRef(ListItem)) button={true} role=\\"menuitem\\" tabIndex={-1} component={{...}} selected={[undefined]} disableGutters={false} classes={{...}} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" to=\\"/habitid1\\">
+                                                                  <ForwardRef(ListItem) classes={{...}} button={true} role=\\"menuitem\\" tabIndex={-1} component={{...}} selected={[undefined]} disableGutters={false} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" to=\\"/habitid1\\">
+                                                                    <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} to=\\"/habitid1\\" component={{...}} focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                      <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} to=\\"/habitid1\\" component={{...}} focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                        <Link className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[undefined]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false} to=\\"/habitid1\\">
+                                                                          <LinkAnchor className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[undefined]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false} href=\\"/habitid1\\" navigate={[Function: navigate]}>
+                                                                            <a className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false} href=\\"/habitid1\\" onClick={[Function: onClick]}>
+                                                                              <div className=\\"HabitItemMenuContent-root-59\\">
+                                                                                <MaterialDesignIcon className=\\"HabitItemMenuContent-icon-60\\" name=\\"pencil\\">
+                                                                                  <span className=\\"material-icon mdi mdi-pencil HabitItemMenuContent-icon-60\\" style={[undefined]} />
+                                                                                </MaterialDesignIcon>
+                                                                                <span className=\\"HabitItemMenuContent-text-61\\">
+                                                                                  Edit
+                                                                                </span>
+                                                                              </div>
+                                                                              <NoSsr>
+                                                                                <WithStyles(undefined) center={false}>
+                                                                                  <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                                                                                    <span className=\\"MuiTouchRipple-root\\">
+                                                                                      <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                                                                    </span>
+                                                                                  </ForwardRef(TouchRipple)>
+                                                                                </WithStyles(undefined)>
+                                                                              </NoSsr>
+                                                                            </a>
+                                                                          </LinkAnchor>
+                                                                        </Link>
+                                                                      </ForwardRef(ButtonBase)>
+                                                                    </WithStyles(ForwardRef(ButtonBase))>
+                                                                  </ForwardRef(ListItem)>
+                                                                </WithStyles(ForwardRef(ListItem))>
+                                                              </ForwardRef(MenuItem)>
+                                                            </WithStyles(ForwardRef(MenuItem))>
+                                                          </HabitItemMenuContent>
+                                                        </WithStyles(HabitItemMenuContent)>
+                                                        <WithStyles(HabitItemMenuContent) icon=\\"pause\\" title=\\"Pause\\" action={[Function: onPause]}>
+                                                          <HabitItemMenuContent classes={{...}} icon=\\"pause\\" title=\\"Pause\\" action={[Function: onPause]}>
+                                                            <WithStyles(ForwardRef(MenuItem)) onClick={[Function: onPause]}>
+                                                              <ForwardRef(MenuItem) classes={{...}} onClick={[Function: onPause]}>
+                                                                <WithStyles(ForwardRef(ListItem)) button={true} role=\\"menuitem\\" tabIndex={-1} component=\\"li\\" selected={[undefined]} disableGutters={false} classes={{...}} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" onClick={[Function: onPause]}>
+                                                                  <ForwardRef(ListItem) classes={{...}} button={true} role=\\"menuitem\\" tabIndex={-1} component=\\"li\\" selected={[undefined]} disableGutters={false} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" onClick={[Function: onPause]}>
+                                                                    <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} onClick={[Function: onPause]} component=\\"li\\" focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                      <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} onClick={[Function: onPause]} component=\\"li\\" focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                        <li className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[Function: onPause]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false}>
+                                                                          <div className=\\"HabitItemMenuContent-root-59\\">
+                                                                            <MaterialDesignIcon className=\\"HabitItemMenuContent-icon-60\\" name=\\"pause\\">
+                                                                              <span className=\\"material-icon mdi mdi-pause HabitItemMenuContent-icon-60\\" style={[undefined]} />
+                                                                            </MaterialDesignIcon>
+                                                                            <span className=\\"HabitItemMenuContent-text-61\\">
+                                                                              Pause
+                                                                            </span>
+                                                                          </div>
+                                                                          <NoSsr>
+                                                                            <WithStyles(undefined) center={false}>
+                                                                              <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                                                                                <span className=\\"MuiTouchRipple-root\\">
+                                                                                  <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                                                                </span>
+                                                                              </ForwardRef(TouchRipple)>
+                                                                            </WithStyles(undefined)>
+                                                                          </NoSsr>
+                                                                        </li>
+                                                                      </ForwardRef(ButtonBase)>
+                                                                    </WithStyles(ForwardRef(ButtonBase))>
+                                                                  </ForwardRef(ListItem)>
+                                                                </WithStyles(ForwardRef(ListItem))>
+                                                              </ForwardRef(MenuItem)>
+                                                            </WithStyles(ForwardRef(MenuItem))>
+                                                          </HabitItemMenuContent>
+                                                        </WithStyles(HabitItemMenuContent)>
+                                                        <WithStyles(HabitItemMenuContent) icon=\\"delete\\" title=\\"Delete\\" action={[Function: onDelete]}>
+                                                          <HabitItemMenuContent classes={{...}} icon=\\"delete\\" title=\\"Delete\\" action={[Function: onDelete]}>
+                                                            <WithStyles(ForwardRef(MenuItem)) onClick={[Function: onDelete]}>
+                                                              <ForwardRef(MenuItem) classes={{...}} onClick={[Function: onDelete]}>
+                                                                <WithStyles(ForwardRef(ListItem)) button={true} role=\\"menuitem\\" tabIndex={-1} component=\\"li\\" selected={[undefined]} disableGutters={false} classes={{...}} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" onClick={[Function: onDelete]}>
+                                                                  <ForwardRef(ListItem) classes={{...}} button={true} role=\\"menuitem\\" tabIndex={-1} component=\\"li\\" selected={[undefined]} disableGutters={false} className=\\"MuiMenuItem-root MuiMenuItem-gutters\\" onClick={[Function: onDelete]}>
+                                                                    <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} onClick={[Function: onDelete]} component=\\"li\\" focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                      <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" disabled={false} role=\\"menuitem\\" tabIndex={-1} onClick={[Function: onDelete]} component=\\"li\\" focusVisibleClassName=\\"Mui-focusVisible\\">
+                                                                        <li className=\\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\\" onBlur={[Function]} onClick={[Function: onDelete]} onFocus={[Function]} onKeyDown={[Function]} onKeyUp={[Function]} onMouseDown={[Function]} onMouseLeave={[Function]} onMouseUp={[Function]} onDragLeave={[Function]} onTouchEnd={[Function]} onTouchMove={[Function]} onTouchStart={[Function]} tabIndex={-1} role=\\"menuitem\\" aria-disabled={false}>
+                                                                          <div className=\\"HabitItemMenuContent-root-59\\">
+                                                                            <MaterialDesignIcon className=\\"HabitItemMenuContent-icon-60\\" name=\\"delete\\">
+                                                                              <span className=\\"material-icon mdi mdi-delete HabitItemMenuContent-icon-60\\" style={[undefined]} />
+                                                                            </MaterialDesignIcon>
+                                                                            <span className=\\"HabitItemMenuContent-text-61\\">
+                                                                              Delete
+                                                                            </span>
+                                                                          </div>
+                                                                          <NoSsr>
+                                                                            <WithStyles(undefined) center={false}>
+                                                                              <ForwardRef(TouchRipple) classes={{...}} center={false}>
+                                                                                <span className=\\"MuiTouchRipple-root\\">
+                                                                                  <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                                                                </span>
+                                                                              </ForwardRef(TouchRipple)>
+                                                                            </WithStyles(undefined)>
+                                                                          </NoSsr>
+                                                                        </li>
+                                                                      </ForwardRef(ButtonBase)>
+                                                                    </WithStyles(ForwardRef(ButtonBase))>
+                                                                  </ForwardRef(ListItem)>
+                                                                </WithStyles(ForwardRef(ListItem))>
+                                                              </ForwardRef(MenuItem)>
+                                                            </WithStyles(ForwardRef(MenuItem))>
+                                                          </HabitItemMenuContent>
+                                                        </WithStyles(HabitItemMenuContent)>
+                                                      </ul>
+                                                    </ForwardRef(List)>
+                                                  </WithStyles(ForwardRef(List))>
+                                                </ForwardRef(MenuList)>
+                                              </div>
+                                            </ForwardRef(Paper)>
+                                          </WithStyles(ForwardRef(Paper))>
+                                        </Transition>
+                                      </ForwardRef(Grow)>
+                                      <div tabIndex={0} data-test=\\"sentinelEnd\\" />
+                                    </TrapFocus>
+                                  </div>
+                                </Portal>
+                              </ForwardRef(Portal)>
+                            </ForwardRef(Modal)>
+                          </ForwardRef(Popover)>
+                        </WithStyles(ForwardRef(Popover))>
+                      </ForwardRef(Menu)>
+                    </WithStyles(ForwardRef(Menu))>
+                  </div>
+                </HabitItemMenu>
+              </Connect(HabitItemMenu)>
+            </WithStyles(undefined)>
+          </div>
+        </div>
+      </HabitItem>
+    </Provider>
+  </Router>
+</MemoryRouter>"
 `;

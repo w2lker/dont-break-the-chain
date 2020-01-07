@@ -1,38 +1,77 @@
+import { List } from 'immutable';
 import React from 'react';
 
 import { mount, shallow } from 'enzyme';
-// import cases from 'jest-in-case';
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 
+import { MemoryRouter } from 'react-router-dom';
 import HabitItem, { IHabitItemProps } from './HabitItem';
-import habitItemStyles from './HabitItem.styles';
+import { habitItemStyles } from './HabitItem.styles';
+
+const middleware = [thunk];
+const mockStore = configureMockStore(middleware);
 
 const testSetup = () => {
   const classes = {
-    root: 'habitItem-wrapper',
+    wrapper: 'habitItem-wrapper',
+    lastWrapper: 'habitItem-last-wrapper',
+    icon: 'habitItem-icon',
+    checkMark: 'habitItem-check-mark',
+    description: 'habitItem-description',
+    title: 'habitItem-title',
+    subtitle: 'habitItem-subtitle',
   };
 
   const classesKeys = Object.keys(classes);
 
-  const emptyProps: IHabitItemProps = {
-    classes,
-  };
-
   const sampleProps: IHabitItemProps = {
-    classes,
+    content: {
+      id: 1,
+      name: 'Sample habit',
+      color: 'blue',
+      icon: 'sample-icon',
+      currentChain: 1,
+      longestChain: 2,
+      dates: List(),
+    },
+    isLast: false,
   };
 
-  return { classes, classesKeys, emptyProps, sampleProps };
+  const store = mockStore({});
+
+  const wrappedComponent = (props: IHabitItemProps) => (
+    <MemoryRouter>
+      <Provider store={store}>
+        <HabitItem {...props}/>
+      </Provider>
+    </MemoryRouter>
+  );
+
+  return { classes, classesKeys, sampleProps, wrappedComponent };
 };
 
 describe('HabitItem component', () => {
 
   it('match snapshot', () => {
-    const { sampleProps } = testSetup();
-    const component = shallow(<HabitItem {...sampleProps} />);
+    const { sampleProps, wrappedComponent } = testSetup();
+    const component = mount(wrappedComponent(sampleProps));
     expect(component.debug()).toMatchSnapshot();
   });
 
-  test.todo('sample placeholder');
+  it('skips render with incorrect habit', () => {
+    const { sampleProps, wrappedComponent } = testSetup();
+    const props = {
+      ...sampleProps,
+      content: {
+        ...sampleProps.content,
+        name: '',
+      },
+    };
+    const component = shallow(<HabitItem {...props} />);
+    expect(component.type()).toEqual(null);
+  });
 });
 
 describe('HabitItem styles', () => {
@@ -44,5 +83,4 @@ describe('HabitItem styles', () => {
       expect(habitItemStyles[keyValue]).toBeDefined();
     });
   });
-  test.todo('sample placeholder');
 });
