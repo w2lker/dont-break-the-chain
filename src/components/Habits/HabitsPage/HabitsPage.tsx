@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 import { WithStyles } from '@material-ui/styles';
 import { List } from 'immutable';
+import HabitItem from './HabitItem';
 
 import HabitsHeader from './HabitsHeader';
 import habitsPageStyles from './HabitsPage.styles';
@@ -20,9 +21,17 @@ const HabitsPage: React.FC<IHabitsPageProps> = (props) => {
       getHabits();
     }
   }, [habits, getHabits]);
+  const renderHabits = habits.map((habit, index) => (
+    <HabitItem
+      key={habit.id}
+      content={habit}
+      isLast={index === habits.size - 1}
+    />
+  ));
   return (
     <div className={classes.root}>
       <HabitsHeader />
+      { renderHabits }
     </div>
   );
 };
