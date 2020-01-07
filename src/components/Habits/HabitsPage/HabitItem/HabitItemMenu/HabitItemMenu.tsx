@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import { IconButton, Menu } from '@material-ui/core';
 import { List } from 'immutable';
 import { WithStyles } from 'react-jss';
+import defaultTexts from '../../../../../contants/defaultTexts';
 
 import MaterialDesignIcon from '../../../../basic/Material-Icon';
 import HabitItemMenuContent from '../HabitItemMenuContent';
@@ -37,6 +38,7 @@ const HabitItemMenu: React.FC<IHabitItemMenuProps> = (props) => {
     return  null;
   }
 
+  const texts = defaultTexts.habits.item.menu;
   const habitsRouting = routing.habits;
   const { id, dates } = content as IHabit;
   // @ts-ignore
@@ -62,7 +64,7 @@ const HabitItemMenu: React.FC<IHabitItemMenuProps> = (props) => {
         {isTodayCompleted && (
           <HabitItemMenuContent
             icon="minus"
-            title="Unmark today"
+            title={texts.unmark}
             action={onUncheck}
           />
         )}
@@ -70,25 +72,25 @@ const HabitItemMenu: React.FC<IHabitItemMenuProps> = (props) => {
         {!isTodayCompleted && (
           <HabitItemMenuContent
             icon="check"
-            title="Complete today"
+            title={texts.mark}
             action={onCheck}
           />
         )}
 
         <HabitItemMenuContent
           icon="pencil"
-          title="Edit"
+          title={texts.edit}
           url={linkToUpdate}
         />
         <HabitItemMenuContent
           icon="pause"
-          title="Pause"
+          title={texts.pause}
           action={onPause}
         />
 
         <HabitItemMenuContent
           icon="delete"
-          title="Delete"
+          title={texts.delete}
           action={onDelete}
         />
       </Menu>

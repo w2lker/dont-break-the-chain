@@ -14,6 +14,13 @@ const defaultTexts = {
         return `Today - ${status}`;
       },
       chain: (length: number) => `Chain - ${length} days`,
+      menu: {
+        mark: 'Complete today',
+        unmark: 'Unmark today',
+        edit: 'Edit',
+        pause: 'Pause',
+        delete: 'Delete',
+      },
     },
   },
   profile: {
