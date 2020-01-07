@@ -73,6 +73,7 @@ const habit2: IHabit = {
     filledDates(moment().subtract(38, 'd').toISOString(), 9),
   ),
 };
+
 const habit3: IHabit = {
   id: 15,
   name: 'Spend time with family',

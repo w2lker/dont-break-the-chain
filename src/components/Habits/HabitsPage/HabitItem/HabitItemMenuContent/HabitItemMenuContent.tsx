@@ -14,34 +14,38 @@ export interface IHabitItemMenuContentProps extends WithStyles<typeof habitItemM
   url?: string;
 }
 
-const HabitItemMenuContent: React.FC<IHabitItemMenuContentProps> = (props) => {
-  const { icon, classes, title, action, url } = props;
-  const menuContent = (
-    <div className={classes.root}>
-      <MaterialDesignIcon
-        className={classes.icon}
-        name={icon}
-      />
-      <span className={classes.text}>
+class HabitItemMenuContent extends React.Component<IHabitItemMenuContentProps, {}> {
+  render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    const { icon, classes, title, action, url } = this.props;
+    const menuContent = (
+      <div className={classes.root}>
+        <MaterialDesignIcon
+          className={classes.icon}
+          name={icon}
+        />
+        <span className={classes.text}>
         {title}
       </span>
-    </div>
-  );
-  if (action) {
+      </div>
+    );
+
+    if (action) {
+      return (
+        <MenuItem onClick={action}>
+          {menuContent}
+        </MenuItem>
+      );
+    }
+
     return (
-      <MenuItem onClick={action}>
+      <MenuItem
+        component={Link as React.ElementType}
+        to={url}
+      >
         {menuContent}
       </MenuItem>
     );
   }
-  return (
-    <MenuItem
-      component={Link as React.ElementType}
-      to={url}
-    >
-      {menuContent}
-    </MenuItem>
-  );
-};
+}
 
 export default HabitItemMenuContent;

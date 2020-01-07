@@ -7,6 +7,7 @@ import MaterialDesignIcon from '../../../basic/Material-Icon';
 
 import defaultTexts from '../../../../contants/defaultTexts';
 import habitItemStyles from './HabitItem.styles';
+import HabitItemMenu from './HabitItemMenu';
 
 export interface IHabitItemProps {
   content: IHabit;
@@ -50,7 +51,9 @@ const HabitItem: React.FC<IHabitItemProps> = (props) => {
         <span className={classes.subtitle}>
           {texts.chain(currentChain)}
         </span>
-        {/*  TODO: add menu item */}
+        <HabitItemMenu
+          content={content}
+        />
       </div>
     </div>
   );

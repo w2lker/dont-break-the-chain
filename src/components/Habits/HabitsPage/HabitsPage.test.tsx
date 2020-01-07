@@ -3,9 +3,11 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { List } from 'immutable';
 import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fakeApi from '../../../api/fakeApi';
+import fakeDataHabits from '../../../api/fakeData/habits';
 import { IHabit } from '../../../models/habit';
 
 import HabitsPage, { IHabitsPageProps } from './HabitsPage';
@@ -23,10 +25,11 @@ const testSetup = () => {
     getHabits: jest.fn(),
   };
 
-  const sampleHabits = List([1, 2, 3]);
+  const sampleHabits = fakeDataHabits;
 
-  const sampleStoreData = {
+  const sampleStoreData: IHabitsPageProps = {
     habits: {
+      // @ts-ignore
       habits: List(),
     },
   };
@@ -34,7 +37,15 @@ const testSetup = () => {
   const mockStore = configureMockStore(middleware);
   const store = mockStore(sampleStoreData);
 
-  return { classes, classesKeys, sampleProps, sampleHabits, sampleStoreData, mockStore, store };
+  const wrappedComponent = (props: IHabitsPageProps, testingStore: typeof store) => (
+    <MemoryRouter>
+      <Provider store={testingStore}>
+        <HabitsPage {...props} />
+      </Provider>
+    </MemoryRouter>
+  );
+
+  return { classes, classesKeys, sampleProps, sampleHabits, sampleStoreData, mockStore, store, wrappedComponent };
 };
 
 describe('HabitsPage component', () => {
@@ -46,9 +57,10 @@ describe('HabitsPage component', () => {
   });
 
   it('creates getHabits request', () => {
-    const { sampleProps } = testSetup() as { sampleProps: Required<IHabitsPageProps> };
-    mount(<HabitsPage {...sampleProps} />);
-    expect(sampleProps.habits.size).toBe(0);
+    const { sampleProps, store, wrappedComponent } = testSetup();
+    mount(wrappedComponent(sampleProps, store));
+
+    expect(sampleProps.habits && sampleProps.habits.size).toBe(0);
     expect(sampleProps.getHabits).toBeCalledTimes(1);
   });
 
@@ -72,6 +84,7 @@ describe('HabitsPage styles', () => {
 });
 
 describe('HabitsPage decorators', () => {
+
   it('provides styled classes from decorators', () => {
     const { classesKeys, store } = testSetup();
     const component = mount(
@@ -85,6 +98,7 @@ describe('HabitsPage decorators', () => {
       expect(assignedClasses[keyValue]).toBeDefined();
     });
   });
+
   it('provides habits list from connected store', () => {
     const { mockStore, sampleHabits } = testSetup();
     const storeWithData = {
@@ -94,14 +108,17 @@ describe('HabitsPage decorators', () => {
     };
     const store = mockStore(storeWithData);
     const component = mount(
+      <MemoryRouter>
         <Provider store={store}>
           <HabitsPageDecorated />
-        </Provider>,
+        </Provider>
+      </MemoryRouter>,
       );
-    const { habits } = component.find('HabitsPage').props() as { habits: List<IHabit> };
+    const habits = component.find('HabitsPage').props().habits as List<IHabit> ;
     expect(List.isList(habits)).toBeTruthy();
     expect(habits.toObject()).toEqual(sampleHabits.toObject());
   });
+
   it('dispatch getHabits request', () => {
     const { store, sampleHabits } = testSetup();
     const spy = jest.spyOn(fakeApi, 'getHabits').mockImplementation(() => {

@@ -6,7 +6,7 @@ import { colors } from '../../../../contants/colors';
 import { IHabitItemProps } from './HabitItem';
 
 // @ts-ignore
-const habitItemStyles = createUseStyles({
+export const habitItemStyles = {
   wrapper: {
     ...bon.setFlex('flex-start', 'center'),
     position: 'relative',
@@ -48,6 +48,6 @@ const habitItemStyles = createUseStyles({
     ...bon.setFont(14,  '#263238', 400, '0.25px'),
     lineHeight: '20px',
   },
-});
+};
 
-export default habitItemStyles;
+export default createUseStyles(habitItemStyles);

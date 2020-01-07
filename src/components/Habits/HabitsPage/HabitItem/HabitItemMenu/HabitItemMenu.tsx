@@ -32,7 +32,7 @@ const HabitItemMenu: React.FC<IHabitItemMenuProps> = (props) => {
   } = props;
 
   const [menuOpened, setMenuOpened] = useState(false);
-  const menuHolderRef = useRef<HTMLButtonElement>(null);
+  const menuHolderRef = useRef<HTMLDivElement>(null);
 
   if (!content) {
     return  null;
@@ -47,9 +47,11 @@ const HabitItemMenu: React.FC<IHabitItemMenuProps> = (props) => {
   const linkToUpdate = id ? habitsRouting.root + habitsRouting.update.slice(-2) + id : '';
 
   return (
-    <div className={classes.wrapper}>
+    <div
+      ref={menuHolderRef}
+      className={classes.wrapper}
+    >
       <IconButton
-        ref={menuHolderRef}
         onClick={() => setMenuOpened(!menuOpened)}
       >
         <MaterialDesignIcon name="dots-vertical" />
