@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import fakeApi from '../../api/fakeApi';
 import habits from '../../api/fakeData/habits';
 
-import { getHabits, getHabitsError, getHabitsStarted, getHabitsSuccess, HabitsGetStatuses } from '../habits';
+import { getHabits, getHabitsError, getHabitsStarted, getHabitsSuccess, HabitsGetStatuses } from '../habits/getHabits';
 
 const testSetup = () => {
   const sampleError = {

@@ -1,5 +1,5 @@
 import { List } from 'immutable';
-import { HabitsGetStatuses } from '../../actions/habits';
+import { HabitsGetStatuses } from '../../actions/habits/getHabits';
 
 import { IHabit, IHabitsReducer } from '../../models/habit';
 import habitReducer from '../habitReducer';

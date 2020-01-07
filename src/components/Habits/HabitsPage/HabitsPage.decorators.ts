@@ -1,7 +1,7 @@
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Dispatch } from 'react';
 import { connect } from 'react-redux';
-import { getHabits } from '../../../actions/habits';
+import { getHabits } from '../../../actions/habits/getHabits';
 import { IHabitsReducer } from '../../../models/habit';
 import HabitsPage, { IHabitsPageProps } from './HabitsPage';
 import habitsPageStyles from './HabitsPage.styles';

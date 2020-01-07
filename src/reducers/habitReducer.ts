@@ -1,6 +1,6 @@
 import { List } from 'immutable';
 
-import { ActionsHabits, HabitsGetStatuses } from '../actions/habits';
+import { GetHabitsActions, HabitsGetStatuses } from '../actions/habits/getHabits';
 import { IHabitsReducer } from '../models/habit';
 
 const initialState: IHabitsReducer = {
@@ -9,7 +9,7 @@ const initialState: IHabitsReducer = {
   errorMessage: '',
 };
 
-function habitReducer(state = initialState, action: ActionsHabits) {
+function habitReducer(state = initialState, action: GetHabitsActions) {
   switch (action.type) {
 
     case HabitsGetStatuses.active: {

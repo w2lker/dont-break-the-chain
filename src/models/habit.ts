@@ -1,5 +1,5 @@
 import { List } from 'immutable';
-import { HabitsGetStatuses } from '../actions/habits';
+import { HabitsGetStatuses } from '../actions/habits/getHabits';
 import { colorsKeys } from '../contants/colors';
 
 export enum habitStatus {
