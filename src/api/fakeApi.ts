@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import habits from './fakeData/habits';
 import profile from './fakeData/profile';
 
@@ -24,6 +26,12 @@ class Api {
 
   getHabits() {
     return fakeFetch(habits);
+  }
+
+  setHabitCheckStatus(id: number, desiredStatus: boolean) {
+    const currentHabit = habits.find((habit) => habit.id === id);
+    if (!currentHabit) return fakeFetch(null);
+
   }
 
   logout() {
